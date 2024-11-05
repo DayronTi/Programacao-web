@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor-principal: #4EB1E7;  /* Azul meio termo*/ 
+    --cor-secundaria: #7AD3DC; /* Azul claro*/
+    --cor-fundo: #547FAF;      /* Azul escuro*/
+    --cor-texto: #333333;      /* Cor do texto */
+    --fonte-titulo: 'Arial', sans-serif;
+    --fonte-sub-titulo: 'Roboto';
+    --fonte-texto: 'lato';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: auto;
+    width: 1400px;
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+}
+
+
+/* Iniciando a parte da navegação principal */ 
+header {
+    padding: 0px 20px;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    display: inline-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /*z-index;*/ 
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-flex;
+    padding: 0px 20px;
+}
+
+header img {
+    width: 150px;
+}
+
+
+/* Iniciando a parte do menu lateral */ 
+#conteudocompleto {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#menuLateral {
+    padding: 30px;
+    width: 25%;
+    background-color: white;
+    border-radius: 0 0 0 15px;
+}
+
+#perfilConf {
+    display: inline-flex;
+}
+
+#fotoPerfil {
+    width: 25%;
+    border-radius: 50%;
+    margin: 0px 20px 20px 0px;
+}
+
+.textPerfil {
+    padding: 10px 0px 0px 0px;
+    font-family: var(--fonte-titulo);
+}
+
+#iconConfig {
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+#botaoNovoPost {
+    margin-top: 50px;
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    margin: 20px;
+    cursor: pointer;
+}
+
+#botaoNovoPost button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--cor-principal);
+    border: 0px solid;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.online {
+    position: relative;
+}
+
+.online::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: #41db51;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Iniciando a parte dos links no menu lateral  */ 
+#opcoesMenu a{
+    margin: 0px;
+    align-items: center;
+    display: block;
+    padding: 30px 10px;
+}
+
+#opcoesMenu a:hover{
+    border-top: 1px solid rgba(160, 160, 160, 0.151);
+    border-bottom: 1px solid rgba(160, 160, 160, 0.151);
+}
+
+#opcoesMenu {
+    margin-top: 10%;
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    height: 100vh;
+}
+
+
+.shortcut a{
+    padding: 0 10px;
+    display: block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: var(--fonte-sub-titulo);
+    margin-bottom: 30px;
+}
+
+.shortcut img{
+    width: 50px;
+    margin: 0 20px 0 0;
+}
+
+.linkAtalhos a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+i {
+    color: var(--cor-fundo);
+    font-size: 30px;
+    margin: 0 15px 0 0;
+}
+
+.shortcut p {
+    margin: 25px 0;
+    color: #626262;
+    font-weight: 5px;
+}
+
+/* Iniciando o main */
+#hero {
+    flex-basis: 47%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#hero {
+    width: 160%;
+    margin: 6% 10%;
+    padding: 15%;
+}
+
+#pesquisa {
+    width: 90%;
+    border: 0.4px solid black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+#pesquisa img {
+    width: 18px; 
+}
+
+#pesquisa input {
+    border: 0px;
+    padding: 10px;
+}
+
+/* Partindo pro feed */
+ 
+.fotouser {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#post-texto {
+    border: 1px solid black;
+    padding: 5%;
+}
+
+#perfilUser {
+    display: flex;
+}
+
+#conteudo h2 {
+    padding: 6% 0 6% 0;
+    font-size: 30px;
+}
+
+#reacoes button {
+    border: 0px;
+    background-color: rgba(245, 245, 245, 0);
+    width: 20px;
+    padding: 30px;
+    cursor: pointer;
+}
