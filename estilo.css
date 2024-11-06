@@ -5,9 +5,10 @@
 :root {
     --cor-principal: #4EB1E7;  /* Azul meio termo*/ 
     --cor-secundaria: #7AD3DC; /* Azul claro*/
-    --cor-fundo: #547FAF;      /* Azul escuro*/
+    --cor-fundo: #547FB0;      /* Azul escuro*/
     --cor-texto: #333333;      /* Cor do texto */
-    --fonte-titulo: 'Arial', sans-serif;
+    --cor-fundo-branco: #F2F2F2;  /* Bruno, se tu for usar algum fundo branco, eu estou usando esse. Ass: Thiago */
+    --fonte-titulo: 'Inter';
     --fonte-sub-titulo: 'Roboto';
     --fonte-texto: 'lato';
 }
