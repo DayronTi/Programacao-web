@@ -9,14 +9,17 @@
 <body>
     <header>
         <nav> 
-            <img src="/imagens/nossaLogo.png" alt="Foto da nossa logo em png">
-
-            <ul>
-                <li>home</li>
-                <li>maketing place</li>
-                <li>grupos</li>
-                <li>sobre o AGRU</li>   
-            </ul>
+            <div class="menu-logo">
+                <img src="imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo">
+            </div>
+            <form action="/pesquisa" method="get" class="barra-pesquisa">
+                <input type="search" name="q" placeholder="Buscar no ecossistema Agru" aria-label="Buscar produtos"
+                    class="input-pesquisa">
+                <button type="submit" class="btn-pesquisa"><img src="/imagens/icondepesquisa.jpg" alt="uma lupa para auxiliar à encontrar a área de pesquisa"></button>
+            </form>
+            <div class="acessar-carrinho">
+                <button class="btn-acessar">Acessar / Cadastrar</button>
+            </div>
         </nav>
     </header>
 
@@ -31,7 +34,6 @@
             </div>
             <div id="opcoesMenu" class="linkAtalhos">
                 <a href="#"><i class="fa-solid fa-globe"></i> Últimas notícias </a>
-                <a href="#"><i class="fa-solid fa-user-group"></i> Amigos </a>
                 <a href="#"><i class="fa-solid fa-comments"></i> Fórum </a>
                 <a href="#"><i class="fa-solid fa-store"></i> Marketplace </a>
                 <a href="#"><i class="fa-solid fa-earth-americas"></i> Diversidade Agru </a>
@@ -44,21 +46,63 @@
                 <a href="#" title=""><img src="/imagens/pedidosLink.jpg" alt="">Pedidos Frequentes</a>
                 <a href="#" title=""><img src="/imagens/amigosLink.jpg" alt="">5 amigos online</a>
             </div>
-    
-            <div id="botaoNovoPost">
-                <button>NOVO POST</button>
-            </div>
-    
         </aside>
     
         <main>
             <section id="hero">
-                <div id="pesquisa">
-                    <img src="/imagens/icondepesquisa.jpg" alt="uma lupa para auxiliar à encontrar a área de pesquisa">
-                    <input type="text" name="pesquisa" placeholder="Procure algo dentro do Agru">
-                </div>
-    
+                <section id="artigos">
+                    <div class="tags-informativas">
+                        <!-- Retângulo 1 -->
+                        <div class="box">
+                            <img src="https://via.placeholder.com/250x200" alt="Imagem 1">
+                            <h3>Título 1</h3>
+                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                        </div>
+                
+                        <!-- Retângulo 2 -->
+                        <div class="box">
+                            <img src="https://via.placeholder.com/250x200" alt="Imagem 2">
+                            <h3>Título 2</h3>
+                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
+                        </div>
+                
+                        <!-- Retângulo 3 -->
+                        <div class="box">
+                            <img src="https://via.placeholder.com/250x200" alt="Imagem 3">
+                            <h3>Título 3</h3>
+                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                        </div>
+                    </div>
+                    <div class="tags-informativas">
+                        <!-- Retângulo 1 -->
+                        <div class="box">
+                            <img src="https://via.placeholder.com/250x200" alt="Imagem 1">
+                            <h3>Título 1</h3>
+                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                        </div>
+                
+                        <!-- Retângulo 2 -->
+                        <div class="box">
+                            <img src="https://via.placeholder.com/250x200" alt="Imagem 2">
+                            <h3>Título 2</h3>
+                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
+                        </div>
+                
+                        <!-- Retângulo 3 -->
+                        <div class="box">
+                            <img src="https://via.placeholder.com/250x200" alt="Imagem 3">
+                            <h3>Título 3</h3>
+                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                        </div>
+                    </div>
+                    <a href="#">Veja Mais</a>
+                </section>    
                 <section id="feed">
+                    <div>
+                        <h2>Postagens interessantes para você</h2>
+                        <p>Analise baseada e suas pesquisas</p>
+
+                    </div>
                     <div id="post-texto">
                         <div id="conteudo">
                             <div id="perfilUser">
@@ -77,38 +121,59 @@
                             </div>
 
                         </div>
-                        <div id="interacao">
-                            <div>
-                                <img class="fotouser" src="/imagens/usuarioQualquer.jpg" alt="Uma imagem de um usuario qualquer">
-                                <h4>Giácomo</h4>
-                                <p>Está mesmo, por isso reguei logo minha horta!</p>
-                            </div>                     
-                        </div>
                     </div>
-    
                     <div id="post-texto">
                         <div id="conteudo">
-                            <img class="fotouser" src="/imagens/usuarioQualquer.jpg" alt="Uma imagem de um usuário aleatório.">
-                            <h3>Victor Gabriel</h3>
-                            <p>Acabou de publicar</p>
-                            <h3> Hoje, o sol no planeta Agru está intenso ); </h3>
-    
-                            <button>curtir</button>
-                            <button>compartilhar</button>
-                            <button>comentar</button> <br> <br>
-    
-                        </div>
-                        <div id="interacao">
-                            <div>
-                                <img class="fotouser" src="/imagens/usuarioQualquer.jpg" alt="Uma imagem de um usuario qualquer">
-                                <h4>Giácomo</h4>
-                                <p>Está mesmo, por isso reguei logo minha horta!</p>
-                            </div>                     
+                            <div id="perfilUser">
+                                <img class="fotouser" src="/imagens/usuarioQualquer.jpg" alt="Uma imagem de um usuário aleatório.">
+                                <div>
+                                    <h3>Victor Gabriel</h3>
+                                    <p>Acabou de públicar</p>
+                                </div>
+                            </div>
+                            <h2> Hoje, o sol no planeta Agru está intenso ); </h2>
+
+                            <div id="reacoes" >
+                                <button><i class="fa-solid fa-thumbs-up"></i></button>
+                                <button><i class="fa-solid fa-share"></i></button>
+                                <button><i class="fa-solid fa-comment"></i></button> <br> <br>
+                            </div>
+
                         </div>
                     </div>
+                    <div id="post-texto">
+                        <div id="conteudo">
+                            <div id="perfilUser">
+                                <img class="fotouser" src="/imagens/usuarioQualquer.jpg" alt="Uma imagem de um usuário aleatório.">
+                                <div>
+                                    <h3>Victor Gabriel</h3>
+                                    <p>Acabou de públicar</p>
+                                </div>
+                            </div>
+                            <h2> Hoje, o sol no planeta Agru está intenso ); </h2>
+
+                            <div id="reacoes" >
+                                <button><i class="fa-solid fa-thumbs-up"></i></button>
+                                <button><i class="fa-solid fa-share"></i></button>
+                                <button><i class="fa-solid fa-comment"></i></button> <br> <br>
+                            </div>
+
+                        </div>
+                    </div>
+    
                 </section>
             </section>
         </main>
+
+        <aside id="menuLateral-esquerdo">
+            <div id="opcoesMenu-esquerdo">
+                <a href="#"> Últimas notícias </a>
+                <a href="#"> Amigos </a>
+                <a href="#"> Fórum </a>
+                <a href="#"> Marketplace </a>
+                <a href="#"> Diversidade Agru </a>
+            </div>
+        </aside>
     </div>
     
     <footer>

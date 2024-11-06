@@ -7,6 +7,7 @@
     --cor-secundaria: #7AD3DC; /* Azul claro*/
     --cor-fundo: #547FAF;      /* Azul escuro*/
     --cor-texto: #333333;      /* Cor do texto */
+    --cor-linhas: rgba(0, 0, 0, 0.452);       /* Cores das linhas */
     --fonte-titulo: 'Arial', sans-serif;
     --fonte-sub-titulo: 'Roboto';
     --fonte-texto: 'lato';
@@ -19,38 +20,78 @@
 
 body {
     margin: auto;
-    width: 1400px;
     font-family: var(--fonte-texto);
-    background-color: var(--cor-fundo);
+    background-color: rgba(231, 230, 230, 0.185);
+    width: 100%;
 }
-
 
 /* Iniciando a parte da navegação principal */ 
 header {
     padding: 0px 20px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid var(--cor-linhas);
+}
+
+.menu-logo .logo {
+    width: 150px;
+    height: auto;
 }
 
 nav {
-    display: inline-flex;
+    align-items: center;
     display: flex;
     justify-content: space-between;
+    padding: 30px 20px;
+}
+
+nav h1 {
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.acessar-carrinho button {
+    background-color: #007bff;
+    /* Azul para botões */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-pesquisa {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.barra-pesquisa img {
+    width: 18px;
+    padding: 5px 12px;
+}
+
+.barra-pesquisa {
+    display: flex;
     align-items: center;
-    position: sticky;
-    top: 0;
-    /*z-index;*/ 
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 15px;
 }
 
-nav ul li{
-    list-style-type: none;
-    display: inline-flex;
-    padding: 0px 20px;
+.input-pesquisa {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
 }
 
-header img {
-    width: 150px;
-}
+
 
 
 /* Iniciando a parte do menu lateral */ 
@@ -61,17 +102,18 @@ header img {
 
 #menuLateral {
     padding: 30px;
-    width: 25%;
+    width: 20%;
     background-color: white;
     border-radius: 0 0 0 15px;
 }
 
 #perfilConf {
     display: inline-flex;
+    border-bottom: 1px solid var(--cor-linhas);
 }
 
 #fotoPerfil {
-    width: 25%;
+    width: 20%;
     border-radius: 50%;
     margin: 0px 20px 20px 0px;
 }
@@ -79,30 +121,13 @@ header img {
 .textPerfil {
     padding: 10px 0px 0px 0px;
     font-family: var(--fonte-titulo);
+    font-size: 20px;
 }
 
 #iconConfig {
     padding: 5px;
     width: 15px;
     height: 15px;
-}
-
-#botaoNovoPost {
-    margin-top: 50px;
-    text-align: center;
-    font-family: var(--fonte-titulo);
-    margin: 20px;
-    cursor: pointer;
-}
-
-#botaoNovoPost button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: white;
-    background-color: var(--cor-principal);
-    border: 0px solid;
-    font-weight: 600;
-    letter-spacing: 1px;
 }
 
 .online {
@@ -131,28 +156,33 @@ header img {
 }
 
 #opcoesMenu a:hover{
-    border-top: 1px solid rgba(160, 160, 160, 0.151);
-    border-bottom: 1px solid rgba(160, 160, 160, 0.151);
+    border-radius: 10px;
+    background-color: rgba(165, 165, 165, 0.116);
 }
 
 #opcoesMenu {
-    margin-top: 10%;
+    margin-top: 5%;
     flex-basis: 25%;
     position: sticky;
     top: 70px;
     align-self: flex-start;
-    height: 100vh;
 }
 
+.shortcut {
+    flex-basis: 25%;
+    position: sticky;
+    top: 640px;
+    align-self: flex-start;
+    align-items: center;
+}
 
 .shortcut a{
-    padding: 0 10px;
-    display: block;
-    display: flex;
+    margin: 0px;
     align-items: center;
+    display: block;
     text-decoration: none;
-    font-family: var(--fonte-sub-titulo);
-    margin-bottom: 30px;
+    color: black;
+    padding: 20px 0;
 }
 
 .shortcut img{
@@ -188,29 +218,9 @@ i {
 }
 
 #hero {
-    width: 160%;
-    margin: 6% 10%;
-    padding: 15%;
-}
-
-#pesquisa {
-    width: 90%;
-    border: 0.4px solid black;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    margin-bottom: 10%;
-    text-align: center;
-}
-
-#pesquisa img {
-    width: 18px; 
-}
-
-#pesquisa input {
-    border: 0px;
-    padding: 10px;
+    width: 800px;
+    margin: 30px 20px;
+    padding: 5%;
 }
 
 /* Partindo pro feed */
@@ -238,7 +248,109 @@ i {
 #reacoes button {
     border: 0px;
     background-color: rgba(245, 245, 245, 0);
-    width: 20px;
+    width: 15px;
     padding: 30px;
     cursor: pointer;
 }
+
+.tags-informativas {
+    display: flex;
+    justify-content: space-between;
+}
+.box {
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.box h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+.box p {
+    font-size: 14px;
+    color: #777;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+#artigos a {
+    text-decoration: none;
+    color: var(--cor-fundo);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#artigos {
+    padding: 0 0 60px 0;
+    text-align: center;
+}
+
+/* Iniciando menu lateral da esquerda */
+
+#menuLateral-esquerdo {
+    background-color: white;
+    width: 400px;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Iniciando a parte do footer */
+
+footer {
+    margin-top: 50px;
+    background-color: var(--cor-fundo);
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
