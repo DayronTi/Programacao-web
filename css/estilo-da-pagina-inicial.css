@@ -173,6 +173,9 @@ main {
 
 /* Iniciando a parte dos links no menu lateral  */ 
 #opcoesMenu a{
+    text-decoration: none;
+    color: black;
+    font-size:large;
     margin: 0px;
     align-items: center;
     display: block;
@@ -186,50 +189,17 @@ main {
 
 #opcoesMenu {
     margin-top: 5px;
-    flex-basis: 25%;
+    flex-basis: 20%;
     position: sticky;
     top: 20px;
     align-self: flex-start;
 }
 
-.shortcut {
-    flex-basis: 100%;
-    position: sticky;
-    top: 475px;
-    align-self: flex-start;
-}
-
-.shortcut a{
-    margin: 0px;
-    display: block;
-    text-decoration: none;
-    color: black;
-    padding: 20px 0;
-}
-
-.shortcut img{
-    width: 50px;
-    margin: 0 20px 0 0;
-}
-
-.linkAtalhos a{
-    text-decoration: none;
-    color: black;
-    font-size: large;
-    width: 100%;
-    margin-bottom: 30px;
-}
 
 #opcoesMenu i {
     color: var(--cor-fundo);
     font-size: 30px;
     margin: 0 15px 0 0;
-}
-
-.shortcut p {
-    margin: 10px 0;
-    color: #626262;
-    font-weight: 5px;
 }
 
 /* Iniciando o main */
@@ -238,10 +208,7 @@ main {
     background-color: white;
     border-radius: 20px;
     background-color: #f4f4f4;
-}
-
-#hero {
-    width: 800px;
+    width: 100%;
     margin: 30px 20px;
     padding: 5%;
 }
@@ -445,10 +412,9 @@ main {
     width: 400px; /* Largura fixa para a seção de notícias */
     background-color: white; /* Cor de fundo */
     padding: 30px;
-    margin-left: 100px; /* Espaçamento entre o conteúdo principal */
+    margin-left: 7%; /* Espaçamento entre o conteúdo principal */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar destaque */
     border-radius: 8px; /* Cantos arredondados */
-
     flex-basis: 15%;
     position: sticky;
     top: 60px;

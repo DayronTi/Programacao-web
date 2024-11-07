@@ -1,0 +1,562 @@
+/* Aqui vamos definir o estilo do nosso marketplace */
+/* Explore a paleta de cores (#547FB0, #4EB1E7, #7AD3DC, #F2F2F2, #333333) e tipografia (Títulos: Inter; Sub-títulos: Roboto; Texto: Lato) para criar um design coerente com a temática. Utilize unidades relativas nas medidas. Organize o código CSS para ser legível e fácil de entender. Teste o design em diferentes navegadores e dispositivos. */
+
+/* Import das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Definição de variáveis de estilo*/
+:root {
+    --cor-principal: #4EB1E7;
+    /* Azul meio termo*/
+    --cor-secundaria: #7AD3DC;
+    /* Azul claro*/
+    --cor-fundo: #547FB0;
+    /* Azul escuro*/
+    --cor-texto: #333333;
+    /* Cor do texto */
+    --cor-fundo-branco: #F2F2F2;
+    /* Cor de fundo branco */
+    --fonte-titulo: 'Inter';
+    --fonte-sub-titulo: 'Roboto';
+    --fonte-texto: 'lato';
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-texto);
+}
+
+/* Estilização básica do header */
+.header {
+    background-color: var(--cor-fundo-branco);
+    /* Cor de fundo clara */
+    padding: 15px 30px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Logo */
+.menu-logo .logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Menu topo */
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 15px;
+}
+
+.input-pesquisa {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 90px 0 0 90px;
+    outline: none;
+}
+
+.btn-pesquisa {
+    background-color: #28a745;
+    /* Verde para destaque */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0 90px 90px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-pesquisa:hover {
+    background-color: #218838;
+}
+
+/* Botões de acesso e carrinho */
+.acessar-carrinho button {
+    background-color: #007bff;
+    /* Azul para botões */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-acessar:hover,
+.btn-carrinho:hover {
+    background-color: #0056b3;
+}
+
+/* Menu de navegação */
+.menu-nav {
+    background-color: var(--cor-fundo);
+    /* Fundo escuro */
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.4rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-lista {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #ffc107;
+    /* Amarelo para hover */
+    border-bottom: 2px solid #ffc107;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .barra-pesquisa {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .acessar-carrinho {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-nav {
+        overflow-x: auto;
+    }
+
+    .nav-lista {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Estilização da seção de ofertas */
+.melhores-ofertas {
+    padding: 2rem;
+    background-color: var(--cor-fundo-branco);
+}
+
+.titulo-secao {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.grid-ofertas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-oferta {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-oferta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imagem-produto {
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.nome-produto {
+    font-family: var(--fonte-sub-titulo);
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.descricao-produto {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.preco-original {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.preco-promocional {
+    font-size: 1.2rem;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-ofertas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilização da seção de destaques */
+.produtos-destaque {
+    padding: 2rem;
+    background-color: var(--cor-fundo-branco);
+}
+
+.titulo-secao {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.grid-destaque {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-destaque {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-destaque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imagem-produto {
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.preco-produto {
+    font-size: 1.2rem;
+    color: var(--cor-principal);
+    font-weight: bold;
+    ;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-destaque {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilização da seção produtos da comunidade*/
+.produtos-comunidade {
+    padding: 2rem;
+    background-color: var(--cor-fundo-branco);
+}
+
+.titulo-secao {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.grid-comunidade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-comunidade {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-comunidade:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imagem-produto-comunidade {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.nome-produto-comunidade {
+    font-family: var(--fonte-sub-titulo);
+    font-size: 1.4rem;
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.descricao-produto-comunidade {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.preco-produto-comunidade {
+    font-size: 1.2rem;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-comunidade {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilização das ofertas especiais e dos serviços especializados */
+
+.grid-ofertas-servicos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Ajusta a proporção entre aside e secao */
+    gap: 20px;
+    padding: 2rem;
+    background-color: var(--cor-fundo-branco);
+}
+
+.ofertas-especiais,
+.servicos {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ofertas-especiais h2,
+.servicos h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 16px;
+}
+
+.oferta-item,
+.servico-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--cor-secundaria);
+}
+
+.oferta-item:last-child,
+.servico-item:last-child {
+    border-bottom: none;
+}
+
+.oferta-item a,
+.servico-item a {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+}
+
+.oferta-item span,
+.servico-item button {
+    font-family: var(--fonte-sub-titulo);
+    color: var(--cor-fundo-branco);
+}
+
+.servico-item button {
+    background-color: var(--cor-principal);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.servico-item button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        /* O grid se adapta para uma coluna */
+    }
+
+    .ofertas-especiais,
+    .servicos {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilização da seção newsletter */
+
+.newsletter {
+    background-color: var(--cor-fundo);
+    color: #fff;
+    padding: 2rem;
+}
+
+.titulo-secao-newsletter {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-fundo-branco);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.input-newsletter {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.btn-newsletter {
+    background-color: var(--cor-principal);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-newsletter:hover {
+    background-color: #218838;
+}
+
+/* Responsividade da seção newsletter*/
+
+@media (max-width: 768px) {
+    .form-newsletter {
+        flex-direction: column;
+    }
+
+    .input-newsletter {
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilização do footer */
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: Lato, sans-serif;
+    color: #333333;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-secao h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.2rem;
+    color: #547FB0;
+}
+
+.footer-secao p,
+.footer-secao ul,
+.footer-secao li {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.footer-secao ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-secao ul li a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.footer-pagamentos,
+.footer-seguranca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.footer-legal {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666666;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
