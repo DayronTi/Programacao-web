@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor-principal: #4EB1E7;  /* Azul meio termo*/ 
+    --cor-secundaria: #7AD3DC; /* Azul claro*/
+    --cor-fundo: #547FAF;      /* Azul escuro*/
+    --cor-texto: #333333;      /* Cor do texto */
+    --cor-linhas: rgba(0, 0, 0, 0.452);       /* Cores das linhas */
+    --fonte-titulo: 'Arial', sans-serif;
+    --fonte-sub-titulo: 'Roboto';
+    --fonte-texto: 'lato';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: auto;
+    font-family: var(--fonte-texto);
+    background-color: rgba(231, 230, 230, 0.185);
+    width: 100%;
+}
+
+/* Iniciando a parte da navegação principal */ 
+header {
+    padding: 0px 20px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid var(--cor-linhas);
+}
+
+.menu-logo .logo {
+    width: 150px;
+    height: auto;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+nav h1 {
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.acessar-carrinho button {
+    background-color: #007bff;
+    /* Azul para botões */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-pesquisa {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.btn-pesquisa {
+    border: none;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    background-color: var(--cor-fundo);
+}
+
+.btn-pesquisa:hover {
+    transition: background-color 0.3s;
+    background-color: #547eafbd;
+}
+
+.btn-pesquisa i {
+    width: 60px;
+}
+
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 15px;
+}
+
+.input-pesquisa {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+/* Iniciando a parte do menu lateral */ 
+#conteudocompleto {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #f4f4f4;
+}
+
+main {
+    background-color: #f4f4f4;
+}
+
+#menuLateral {
+    padding: 30px;
+    width: 20%;
+    background-color: white;
+}
+
+#perfilConf {
+    display: inline-flex;
+    border-bottom: 1px solid var(--cor-linhas);
+}
+
+#fotoPerfil {
+    width: 20%;
+    border-radius: 50%;
+    margin: 0px 20px 20px 0px;
+}
+
+.textPerfil {
+    padding: 10px 0px 0px 0px;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    font-size: 17px;
+}
+
+.textPerfil h2{
+    color: var(--cor-fundo);
+    cursor: pointer;
+}
+
+.textPerfil h2:hover{
+    color: rgb(47, 161, 238);
+}
+
+#iconConfig {
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.online {
+    position: relative;
+}
+
+.online::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: #41db51;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Iniciando a parte dos links no menu lateral  */ 
+#opcoesMenu a{
+    margin: 0px;
+    align-items: center;
+    display: block;
+    padding: 30px 10px;
+}
+
+#opcoesMenu a:hover{
+    border-radius: 10px;
+    background-color: rgba(165, 165, 165, 0.116);
+}
+
+#opcoesMenu {
+    margin-top: 5px;
+    flex-basis: 25%;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+.shortcut {
+    flex-basis: 100%;
+    position: sticky;
+    top: 475px;
+    align-self: flex-start;
+}
+
+.shortcut a{
+    margin: 0px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 20px 0;
+}
+
+.shortcut img{
+    width: 50px;
+    margin: 0 20px 0 0;
+}
+
+.linkAtalhos a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#opcoesMenu i {
+    color: var(--cor-fundo);
+    font-size: 30px;
+    margin: 0 15px 0 0;
+}
+
+.shortcut p {
+    margin: 10px 0;
+    color: #626262;
+    font-weight: 5px;
+}
+
+/* Iniciando o main */
+#hero {
+    flex-basis: 47%;
+    background-color: white;
+    border-radius: 20px;
+    background-color: #f4f4f4;
+}
+
+#hero {
+    width: 800px;
+    margin: 30px 20px;
+    padding: 5%;
+}
+
+/* Partindo pro feed */
+
+/* Estilo para a área principal do fórum */
+#forum {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    background-color: #f4f4f4;
+}
+
+/* A seção de discussões onde as postagens vão aparecer */
+#discussoes {
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.postagem {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.foto-user {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.usuario h3 {
+    font-size: 18px;
+    color: var(--cor-fundo);
+    margin-bottom: 5px;
+}
+
+.usuario p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Conteúdo da postagem */
+.conteudo-postagem h2 {
+    font-size: 20px;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.conteudo-postagem p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Interações */
+.interacoes {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.interacoes button {
+    background: none;
+    border: none;
+    color: var(--cor-fundo);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.interacoes button:hover {
+    color: var(--cor-principal);
+}
+
+.interacoes i {
+    font-size: 16px;
+}
+
+/* Estilo para o título da seção de discussões */
+#discussoes h1 {
+    font-size: 32px;
+    color: var(--cor-fundo);
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #discussoes {
+        width: 100%;
+    }
+
+    .usuario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .interacoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.fotouser {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#post-texto {
+    border: 1px solid black;
+    padding: 5%;
+}
+
+#perfilUser {
+    display: flex;
+}
+
+#conteudo h2 {
+    padding: 6% 0 6% 0;
+    font-size: 30px;
+}
+
+#reacoes button {
+    border: 0px;
+    background-color: rgba(245, 245, 245, 0);
+    width: 15px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.tags-informativas {
+    display: flex;
+    justify-content: space-between;
+}
+.box {
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.box h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+.box p {
+    font-size: 14px;
+    color: #777;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+#artigos a {
+    text-decoration: none;
+    color: var(--cor-fundo);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#artigos {
+    padding: 0 0 60px 0;
+    text-align: center;
+}
+
+/* Iniciando menu lateral da esquerda */
+
+#noticias {
+    margin-top: 30px;
+    width: 400px; /* Largura fixa para a seção de notícias */
+    background-color: white; /* Cor de fundo */
+    padding: 30px;
+    margin-left: 100px; /* Espaçamento entre o conteúdo principal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar destaque */
+    border-radius: 8px; /* Cantos arredondados */
+
+    flex-basis: 15%;
+    position: sticky;
+    top: 60px;
+    align-self: flex-start;
+}
+
+#noticias h2 {
+    font-size: 24px;
+    color: var(--cor-fundo);
+    margin-bottom: 20px;
+    font-family: var(--fonte-titulo);
+}
+
+.noticia {
+    margin-bottom: 20px;
+}
+
+.noticia img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.noticia h3 {
+    font-size: 18px;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.noticia p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.noticia a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
+
+#noticias a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--cor-principal);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#noticias a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #noticias {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #conteudocompleto {
+        flex-direction: column; /* Organiza o layout em coluna em telas pequenas */
+    }
+}
+
+/* Iniciando a parte do footer */
+
+footer {
+    margin-top: 50px;
+    background-color: var(--cor-fundo);
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+/* Início da Responsividade */
+
+/* Configuração geral para quando a largura da tela for menor que 1024px (tablets e dispositivos de tamanho médio) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Reduzir o tamanho da fonte para telas menores */
+    }
+
+    header {
+        padding: 20px; /* Ajustar o padding do header */
+    }
+
+    nav h1 {
+        font-size: 30px; /* Reduzir o tamanho do título do cabeçalho */
+    }
+
+    /* Ajuste do menu lateral */
+    #menuLateral {
+        width: 100%; /* Tornar o menu lateral ocupando 100% da largura em telas menores */
+        padding: 20px;
+    }
+
+    /* Ajustar a largura do conteúdo principal */
+    #conteudocompleto {
+        flex-direction: column; /* Organizar o conteúdo em uma coluna */
+    }
+
+    /* Ajustar a largura do hero */
+    #hero {
+        width: 100%;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    /* Ajuste para as seções de conteúdo */
+    #noticias {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .noticia img {
+        width: 100%; /* Ajustar as imagens para largura total */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Organizar as colunas em uma única coluna no footer */
+        align-items: center;
+    }
+
+    .footer-column {
+        min-width: unset;
+        text-align: center;
+    }
+
+    .footer-social-icons {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+/* Responsividade para telas menores que 768px (smartphones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajuste do tamanho da fonte */
+    }
+
+    header {
+        padding: 15px 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-logo .logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .barra-pesquisa {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .input-pesquisa {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-pesquisa {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Menu lateral */
+    #menuLateral {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #opcoesMenu a {
+        padding: 15px 10px;
+        text-align: left;
+    }
+
+    #hero {
+        width: 100%;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    #noticias {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .noticia img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustar a barra de navegação */
+    .acessar-carrinho button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Ajustar o tamanho do texto do footer */
+    footer h2 {
+        font-size: 22px;
+    }
+}
+
+/* Para telas ainda menores que 480px (smaller devices, like small smartphones) */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Ajustar o tamanho da fonte para telas menores */
+    }
+
+    .acessar-carrinho button {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        text-align: center;
+    }
+
+    .menu-logo .logo {
+        width: 100px;
+        text-align: center;
+    }
+
+    .input-pesquisa {
+        padding: 10px;
+        width: 70%;
+        margin: 0;
+    }
+
+    .barra-pesquisa {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .btn-pesquisa  {
+        width: 30%;
+        margin: 0;
+    }
+
+    #hero {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    #opcoesMenu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #opcoesMenu a {
+        visibility: hidden;
+        margin: 10px 0;
+    }
+
+    #opcoesMenu i {
+        margin: 0;
+        padding: 0;
+        visibility: visible;
+    }
+
+    #noticias {
+        visibility: hidden;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    footer h2 {
+        font-size: 18px; /* Reduzir o tamanho do título no footer */
+    }
+
+    .footer-social-icons {
+        gap: 5px;
+    }
+}
+
+/* Ajuste específico para o layout do fórum */
+@media (max-width: 1024px) {
+    #forum {
+        flex-direction: column;
+    }
+
+    #discussoes {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .usuario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .interacoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
