@@ -52,7 +52,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;   /*Meio que é o minimo de altura que le vai ter é 100vh no caso toda a tela*/ 
-    background: url('/Projeto Agru/Programacao-web/imagens/login-cadastro/background2.jpg');
+    background: url('/imagens/login-cadastro/background2.jpg');
     background-size: cover; /* size serve pra esticar a tela toda*/
     background-position: center;
 }

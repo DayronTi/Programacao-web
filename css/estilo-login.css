@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/Projeto Agru/Programacao-web/imagens/login-cadastro/background2.jpg');
+    background-image: url('/imagens/login-cadastro/background2.jpg');
     background-size: cover;
     padding: 1rem;
     color: black;
