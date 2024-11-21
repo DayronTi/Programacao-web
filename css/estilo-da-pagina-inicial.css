@@ -1,152 +1,252 @@
+/* Aqui vamos definir o estilo do nosso marketplace */
+/* Explore a paleta de cores (#547FB0, #4EB1E7, #7AD3DC, #F2F2F2, #333333) e tipografia (Títulos: Inter; Sub-títulos: Roboto; Texto: Lato) para criar um design coerente com a temática. Utilize unidades relativas nas medidas. Organize o código CSS para ser legível e fácil de entender. Teste o design em diferentes navegadores e dispositivos. */
+
+/* Import das fontes*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/*Definição de variáveis de estilo*/
 :root {
-    --cor-principal: #4EB1E7;  /* Azul meio termo*/ 
-    --cor-secundaria: #7AD3DC; /* Azul claro*/
-    --cor-fundo: #547FAF;      /* Azul escuro*/
-    --cor-texto: #333333;      /* Cor do texto */
-    --cor-linhas: rgba(0, 0, 0, 0.452);       /* Cores das linhas */
-    --fonte-titulo: 'Arial', sans-serif;
+    --cor-principal: #4EB1E7;
+    /* Azul meio termo*/
+    --cor-secundaria: #7AD3DC;
+    /* Azul claro*/
+    --cor-fundo: #547FB0;
+    /* Azul escuro*/
+    --cor-texto: #333333;
+    /* Cor do texto */
+    --cor-fundo-branco: #F2F2F2;
+    /* Cor de fundo branco */
+    --fonte-titulo: 'Inter';
     --fonte-sub-titulo: 'Roboto';
     --fonte-texto: 'lato';
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: auto;
     font-family: var(--fonte-texto);
-    background-color: rgba(231, 230, 230, 0.185);
-    width: 100%;
+    background-color: var(--cor-fundo-);
 }
 
-/* Iniciando a parte da navegação principal */ 
-header {
-    padding: 0px 20px;
-    background-color: white;
-    color: rgb(0, 0, 0);
-    border-bottom: 1px solid var(--cor-linhas);
+/* Estilização básica do header */
+.header {
+    position: fixed;  /* Faz o cabeçalho ficar fixo */
+    top: 0;  /* Fica no topo da página */
+    width: 100vw;  /* Largura total da página */
+    background-color: white;  /* Cor de fundo */
+    padding: 15px 30px;  /* Espaçamento interno */
+    border-bottom: 2px solid #e0e0e0;  /* Linha divisória */
+    z-index: 10;  /* Garante que o cabeçalho fique acima de outros elementos */
 }
 
+/* Logo */
 .menu-logo .logo {
-    width: 150px;
+    width: 200px;
+    padding: 10px 0;
     height: auto;
 }
 
-nav {
-    align-items: center;
+/* Menu topo */
+.menu-topo {
     display: flex;
     justify-content: space-between;
-    padding: 30px 20px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-nav h1 {
-    font-weight: 900;
-    font-size: 35px;
-}
-
-.acessar-carrinho button {
-    background-color: #007bff;
-    /* Azul para botões */
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    margin-left: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Barra de pesquisa */
+.barra-pesquisa {
+    display: flex;
 }
 
 .input-pesquisa {
-    flex-grow: 1;
+    width: 20vw;
+    height: 35px;
+    max-height: 40px;
+    margin: 0px;
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
-    outline: none;
 }
 
 .btn-pesquisa {
+    margin: 0;
+    padding: 0;
+    width: 9vw;
+    height: 35px;
     border: none;
     color: white;
     padding: 9px 16px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     background-color: var(--cor-fundo);
+    transition: background-color 0.3s;
 }
 
 .btn-pesquisa:hover {
     transition: background-color 0.3s;
-    background-color: #547eafbd;
+    background-color: #003f88;
 }
 
-.btn-pesquisa i {
-    width: 60px;
-}
-
-
-.barra-pesquisa {
+/* Botões de acesso e carrinho */
+.acessar-carrinho {
     display: flex;
-    align-items: center;
-    flex-grow: 1;
-    max-width: 400px;
-    margin: 0 15px;
+    justify-content: center;
 }
 
-.input-pesquisa {
-    flex-grow: 1;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    outline: none;
+.acessar-carrinho button {
+    background-color: var(--cor-fundo);
+    /* Azul para botões */
+    color: #fff;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Iniciando a parte do menu lateral */ 
+.btn-acessar:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        position: static;
+        width: 100%;
+        background-color: white;
+        /* Cor de fundo clara */
+        padding: 15px 30px;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .menu-topo {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .menu-logo .logo {
+        width: 200px;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .barra-pesquisa {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .input-pesquisa{
+        width: 40%;
+    }
+
+    .btn-pesquisa {
+        width: 21%;
+    }
+
+    .acessar-carrinho {
+        padding: 2% 20%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 440px) {
+    .input-pesquisa{
+        width: 50%;
+    }
+
+    .btn-pesquisa {
+        width: 27%;
+    }
+
+    .acessar-carrinho {
+        padding: 4% 10%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Iniciando a parte do conteúdo */
 #conteudocompleto {
+    background-color: var(--cor-fundo-branco);
     display: flex;
-    justify-content: flex-start;
-    background-color: #f4f4f4;
+    justify-content: space-between;
 }
-
-main {
-    background-color: #f4f4f4;
-}
-
+/* Iniciando a parte do menu lateral */ 
 #menuLateral {
-    padding: 30px;
-    width: 20%;
-    background-color: white;
+    position: fixed;  /* Fixa o menu na tela */
+    top: 124px;  /* Coloca o menu logo abaixo do cabeçalho */
+    left: 0;  /* Alinha à esquerda */
+    width: 250px;  /* Largura do menu */
+    height: 100vh;  /* Altura total da tela */
+    background-color: white;  /* Cor de fundo */
+    border-right: 1px solid #e0e0e0;  /* Borda à direita do menu */
+    padding: 20px;  /* Espaçamento interno */
+    z-index: 5;  /* Garante que o menu fique abaixo do cabeçalho */
+}
+
+#menuLateral-responsivo {
+    display: none;
 }
 
 #perfilConf {
+    align-items: center;
     display: inline-flex;
-    border-bottom: 1px solid var(--cor-linhas);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.acessar-carrinho-menuLateral button {
+    background-color: white;
+    /* Azul para botões */
+    color: var(--cor-fundo);
+    font-size: 0.8rem;
+    border: none;
+    padding: 6px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.acessar-carrinho-menuLateral button:hover {
+    background-color: var(--cor-fundo);
+    /* Azul para botões */
+    color: #fff;
+    font-size: 0.8rem;
+    border: none;
+    padding: 9px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 #fotoPerfil {
-    width: 20%;
+    margin-right: 3%;
+    width: 40%;
+    height: 40%;
     border-radius: 50%;
-    margin: 0px 20px 20px 0px;
+    margin-bottom: 10%;
+    transition: transform 0.4s;
 }
 
-.textPerfil {
-    padding: 10px 0px 0px 0px;
-    font-family: var(--fonte-titulo);
-    color: var(--cor-principal);
-    font-size: 17px;
+#fotoPerfil:hover {
+    transform: scale(1.3);
 }
 
-.textPerfil h2{
+.btn-acessar-menuLatera {
+    background-color: rgba(95, 158, 160, 0);
     color: var(--cor-fundo);
-    cursor: pointer;
-}
-
-.textPerfil h2:hover{
-    color: rgb(47, 161, 238);
 }
 
 #iconConfig {
@@ -172,54 +272,282 @@ main {
 }
 
 /* Iniciando a parte dos links no menu lateral  */ 
+#opcoesMenu {
+    margin-top: 5px;
+    align-self: flex-start;
+}
+
 #opcoesMenu a{
     text-decoration: none;
     color: black;
-    font-size:large;
+    font-size: 1rem;
     margin: 0px;
     align-items: center;
-    display: block;
+    display: flex;
     padding: 30px 10px;
 }
 
 #opcoesMenu a:hover{
     border-radius: 10px;
     background-color: rgba(165, 165, 165, 0.116);
+    transform: scale(1.1);
 }
-
-#opcoesMenu {
-    margin-top: 5px;
-    flex-basis: 20%;
-    position: sticky;
-    top: 20px;
-    align-self: flex-start;
-}
-
 
 #opcoesMenu i {
     color: var(--cor-fundo);
-    font-size: 30px;
-    margin: 0 15px 0 0;
+    display: block;
+    font-size: 1rem;
+    margin: 0 10px 0 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Reduz a largura do menu lateral */
+    #menuLateral {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #menuLateral-responsivo {
+        width: 100vw;
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        justify-content: space-around;
+        height: 10%;
+        position: absolute;
+        background-color: white;
+        width: 100vw;
+        padding: 20px;
+    }
+
+    #fotoPerfil {
+        width: 40px;
+        height: 40px;
+    }
+
+    #opcoesMenu-responsivo {
+        
+        display: flex;
+        list-style-type: none;  
+        padding: 0;
+        margin: 0;
+    }
+
+    #opcoesMenu-responsivo span {
+        display: none;
+    }
+
+    #opcoesMenu-responsivo a {
+        flex: 1 1 200px;
+        margin: 2px 5px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    #opcoesMenu-responsivo i {
+        font-size: 1.8rem;
+        color: var(--cor-fundo);
+        display: block;
+        padding: 5px 20px;
+        transition: color 0.3s;
+    }
 }
 
 /* Iniciando o main */
-#hero {
-    flex-basis: 47%;
-    background-color: white;
-    border-radius: 20px;
-    background-color: #f4f4f4;
-    width: 100%;
-    margin: 30px 20px;
-    padding: 5%;
+main {
+    background-color: var(--cor-fundo-branco);
+    margin: 120px 0 0 250px ;
+    padding-bottom: 100px;
 }
 
-/* Partindo pro feed */
+#hero {
+    border-radius: 10px;
+    width: 100%;
+    margin: 30px 0px 0px 30px;
+    padding: 0;
+}
+
+/* Notícias principais */
+#artigos {
+    width: 60vw; /* Define a largura do carrossel */
+    padding: 40px;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden; /* Evita que o conteúdo ultrapasse os limites do carrossel */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease; /* Transição suave ao mover as caixas */
+}
+
+.tags-informativas {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* Garante que as caixas fiquem em uma linha sem quebra */
+}
+
+.box {
+    width: 25%; /* Cada box ocupa 25% da largura para exibir 4 caixas por vez */
+    min-width: 250px; /* Tamanho mínimo para as caixas */
+    height: 350px; /* Altura ajustada para as caixas */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 15px; /* Espaço entre as caixas */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorcer */
+}
+
+.box h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.box p {
+    font-size: 14px;
+    color: #777;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+#artigos button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente o botão */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1; /* Garante que o botão fique acima das caixas */
+}
+
+button.prev {
+    left: 0; /* Coloca o botão de voltar à esquerda */
+}
+
+button.next {
+    right: 0; /* Coloca o botão de avançar à direita */
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Efeito de hover nos botões */
+}
+
+/* Responsividade do carrossel */
+
+@media (max-width: 1024px) {
+    /* Reduz a largura do menu lateral */
+    main {
+        width: 90vw;
+        padding: 0;
+        margin: 50px 0 0 0px;
+
+    }
+
+    #hero {
+        padding-top: 40px;
+        padding-left: 20px;
+        width: 90%;
+        margin-left: 120px;
+        text-align: center;
+    }
+
+    #artigos {
+        width: 620px; /* Define a largura do carrossel */
+        padding: 40px;
+        text-align: center;
+        margin-left: 120px;
+    }
+
+    .box {
+        width: 15%; /* Cada box ocupa 25% da largura para exibir 4 caixas por vez */
+        min-width: 150px; /* Tamanho mínimo para as caixas */
+        height: 300px; /* Altura ajustada para as caixas */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 15px; /* Espaço entre as caixas */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Reduz a largura do menu lateral */
+    main {
+        width: 90vw;
+        padding: 0;
+        margin: 0px;
+
+    }
+
+    #hero {
+        margin: 0;
+        padding: 0;
+        padding-top: 40px;
+        width: 90%;
+        text-align: center;
+    }
+
+    #artigos {
+        margin: 0;
+        width: 400px; /* Define a largura do carrossel */
+        padding: 40px;
+        text-align: center;
+    }
+
+    .box {
+        width: 5%; /* Cada box ocupa 25% da largura para exibir 4 caixas por vez */
+        min-width: 90px; /* Tamanho mínimo para as caixas */
+        height: 150px; /* Altura ajustada para as caixas */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 10px; /* Espaço entre as caixas */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box p {
+        display: none;
+    }
+    
+
+}
 
 /* Estilo para a área principal do fórum */
 #forum {
     display: flex;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 40px 0;
     background-color: #f4f4f4;
 }
 
@@ -233,12 +561,24 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+#discussoes h2 {
+    color: var(--cor-fundo);
+    margin: 20px 0;
+    text-align: center;
+}
+
 .postagem {
     background-color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.postagem:hover {
+    transform: scale(1.03);
+    background-color: rgb(250, 250, 250);
+
 }
 
 .usuario {
@@ -314,23 +654,6 @@ main {
     margin-bottom: 20px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    #discussoes {
-        width: 100%;
-    }
-
-    .usuario {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .interacoes {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
 .fotouser {
     width: 50px;
     margin-right: 10px;
@@ -359,65 +682,64 @@ main {
     cursor: pointer;
 }
 
-.tags-informativas {
-    display: flex;
-    justify-content: space-between;
-}
-.box {
-    width: 250px;
-    height: 350px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.box h3 {
-    margin: 15px 0;
-    font-size: 18px;
-    color: #333;
-}
-.box p {
-    font-size: 14px;
-    color: #777;
-    padding: 0 10px;
-    margin-bottom: 15px;
-}
+@media (max-width: 1024px) {
+    /* Reduz a largura do menu lateral */
+    #forum {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-#artigos a {
-    text-decoration: none;
-    color: var(--cor-fundo);
-    font-weight: 700;
-    font-size: 20px;
-}
+    #discussoes {
+        width: 80%;
+        max-width: 900px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}  
 
-#artigos {
-    padding: 0 0 60px 0;
-    text-align: center;
-}
+@media (max-width: 768px) {
+    /* Reduz a largura do menu lateral */
+    #forum {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        background-color: #f4f4f4;
+        margin-bottom: 30px;
+    }
+
+    #discussoes {
+        margin-left: 80px;
+        width: 100%;
+        max-width: 900px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    span {
+        display: none;
+    }
+} 
+
 
 /* Iniciando menu lateral da esquerda */
-
 #noticias {
-    margin-top: 30px;
-    width: 400px; /* Largura fixa para a seção de notícias */
+    margin-top: 150px;
+    width: 20%; /* Largura fixa para a seção de notícias */
+    max-width: 300px;
     background-color: white; /* Cor de fundo */
-    padding: 30px;
-    margin-left: 7%; /* Espaçamento entre o conteúdo principal */
+    padding: 10px;
+    margin-left: 50px; /* Espaçamento entre o conteúdo principal */
+    margin-right: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar destaque */
     border-radius: 8px; /* Cantos arredondados */
-    flex-basis: 15%;
     position: sticky;
-    top: 60px;
+    top: 160px;
     align-self: flex-start;
 }
 
@@ -475,278 +797,35 @@ main {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     #noticias {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    #conteudocompleto {
-        flex-direction: column; /* Organiza o layout em coluna em telas pequenas */
+        display: none           ;
     }
 }
 
 /* Iniciando a parte do footer */
 
 footer {
-    margin-top: 50px;
     background-color: var(--cor-fundo);
     padding: 40px 20px;
     color: white;
     text-align: center;
+    position:inherit;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    position: absolute;  /* Define a posição para permitir o z-index */
+    z-index: 5 ;  /* Coloca o footer acima de outras divs */
+    position: fixed;  /* Fixa o footer no final da página */
+    display: none;  /* Esconde o footer inicialmente */
 }
+  
+  footer.show {
+    display: block;  /* Torna o footer visível quando a classe "show" for adicionada */
+  }
 
-
-
-
-/* Início da Responsividade */
-
-/* Configuração geral para quando a largura da tela for menor que 1024px (tablets e dispositivos de tamanho médio) */
-@media (max-width: 1024px) {
-    body {
-        font-size: 16px; /* Reduzir o tamanho da fonte para telas menores */
-    }
-
-    header {
-        padding: 20px; /* Ajustar o padding do header */
-    }
-
-    nav h1 {
-        font-size: 30px; /* Reduzir o tamanho do título do cabeçalho */
-    }
-
-    /* Ajuste do menu lateral */
-    #menuLateral {
-        width: 100%; /* Tornar o menu lateral ocupando 100% da largura em telas menores */
-        padding: 20px;
-    }
-
-    /* Ajustar a largura do conteúdo principal */
-    #conteudocompleto {
-        flex-direction: column; /* Organizar o conteúdo em uma coluna */
-    }
-
-    /* Ajustar a largura do hero */
-    #hero {
-        width: 100%;
-        padding: 20px;
-        margin: 20px 0;
-    }
-
-    /* Ajuste para as seções de conteúdo */
-    #noticias {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .noticia img {
-        width: 100%; /* Ajustar as imagens para largura total */
-    }
-
-    .footer-container {
-        flex-direction: column; /* Organizar as colunas em uma única coluna no footer */
-        align-items: center;
-    }
-
-    .footer-column {
-        min-width: unset;
-        text-align: center;
-    }
-
-    .footer-social-icons {
-        flex-direction: row;
-        gap: 10px;
-    }
-}
-
-/* Responsividade para telas menores que 768px (smartphones) */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Ajuste do tamanho da fonte */
-    }
-
-    header {
-        padding: 15px 10px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-logo .logo {
-        width: 120px;
-        height: auto;
-    }
-
-    .barra-pesquisa {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .input-pesquisa {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .btn-pesquisa {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    /* Menu lateral */
-    #menuLateral {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #opcoesMenu a {
-        padding: 15px 10px;
-        text-align: left;
-    }
-
-    #hero {
-        width: 100%;
-        padding: 20px;
-        margin: 20px 0;
-    }
-
-    #noticias {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .noticia img {
-        width: 100%;
-        height: auto;
-    }
-
-    footer {
-        padding: 20px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .footer-column {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Ajustar a barra de navegação */
-    .acessar-carrinho button {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    /* Ajustar o tamanho do texto do footer */
-    footer h2 {
-        font-size: 22px;
-    }
-}
-
-/* Para telas ainda menores que 480px (smaller devices, like small smartphones) */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px; /* Ajustar o tamanho da fonte para telas menores */
-    }
-
-    .acessar-carrinho button {
-        padding: 10px;
-        text-align: center;
-    }
-
-    nav {
-        display: flex;
-        text-align: center;
-    }
-
-    .menu-logo .logo {
-        width: 100px;
-        text-align: center;
-    }
-
-    .input-pesquisa {
-        padding: 10px;
-        width: 70%;
-        margin: 0;
-    }
-
-    .barra-pesquisa {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .btn-pesquisa  {
-        width: 30%;
-        margin: 0;
-    }
-
-    #hero {
-        margin: 10px 0;
-        padding: 15px;
-    }
-
-    #opcoesMenu {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #opcoesMenu a {
-        visibility: hidden;
-        margin: 10px 0;
-    }
-
-    #opcoesMenu i {
-        margin: 0;
-        padding: 0;
-        visibility: visible;
-    }
-
-    #noticias {
-        visibility: hidden;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 15px;
-    }
-
-    footer h2 {
-        font-size: 18px; /* Reduzir o tamanho do título no footer */
-    }
-
-    .footer-social-icons {
-        gap: 5px;
-    }
-}
-
-/* Ajuste específico para o layout do fórum */
-@media (max-width: 1024px) {
-    #forum {
-        flex-direction: column;
-    }
-
-    #discussoes {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .usuario {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .interacoes {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
 
 
 

@@ -8,99 +8,132 @@
     <link rel="stylesheet" href="./css/estilo-da-pagina-inicial.css">
 </head>
 <body>
-    <header>        
-        <nav> 
+    <header class="header">
+        <div class="menu-topo">
             <div class="menu-logo">
-                <img src="/imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo">
+                <a href="/Projeto Agru/Programacao-web/index.html"><img src="/Projeto Agru/Programacao-web/imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"></a>
             </div>
             <form action="/pesquisa" method="get" class="barra-pesquisa">
-                <input type="search" name="q" placeholder="Buscar no ecossistema Agru" aria-label="Buscar produtos"
+                <input type="search" name="q" placeholder="Busque assuntos..." aria-label="Buscar Assuntos"
                     class="input-pesquisa">
-                <button type="submit" class="btn-pesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="submit" class="btn-pesquisa">Pesquisar</button>
             </form>
             <div class="acessar-carrinho">
-                <button class="btn-acessar">Acessar / Cadastrar</button>
+                <form action="/Projeto Agru/Programacao-web/html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
             </div>
-        </nav>
+        </div>
     </header>
 
     <div id="conteudocompleto">
         <aside id="menuLateral">
-            <div id="perfilConf" class="online">
+            <header id="perfilConf" class="online">
                 <img id="fotoPerfil" src="./imagens/iconUser.jpeg" alt="Uma imagem de quem está logado">
-                <div class="textPerfil">
-                    <h2>Entrar</h2>
-                    <p>Faça login ou cadastre-se</p>
+                <div class="acessar-carrinho-menuLateral">
+                    <form action="/Projeto Agru/Programacao-web/html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
                 </div>
-            </div>
+            </header>
+            <nav id="opcoesMenu">
+                <a href="/Projeto Agru/Programacao-web/html/ultimas-noticiais.html">
+                    <i class="fa-solid fa-globe"></i><span>Últimas notícias</span>
+                </a>
+                <a href="/Projeto Agru/Programacao-web/html/forum.html">
+                    <i class="fa-solid fa-comments"></i><span>Fórum</span>
+                </a>
+                <a href="/Projeto Agru/Programacao-web/html/marketplace.html">
+                    <i class="fa-solid fa-store"></i> <span>Marketplace</span>
+                </a>
+                <a href="/Projeto Agru/Programacao-web/html/diversidade-agru.html">
+                    <i class="fa-solid fa-earth-americas"></i><span>Diversidade Agru</span>
+                </a>
+                <a href="#" id="linkVejaMais">Veja Mais...</a> <!-- Link "Veja Mais..." -->
+            </nav>
+        </aside>
         
-            <div id="opcoesMenu" class="linkAtalhos">
-                <a href="#">
-                    <i class="fa-solid fa-globe"></i> Últimas notícias
+
+
+
+        <aside id="menuLateral-responsivo">
+            <header id="perfilConf">
+                <img id="fotoPerfil" src="./imagens/iconUser.jpeg" alt="Uma imagem de quem está logado">
+            </header>
+            <nav id="opcoesMenu-responsivo">
+                <a href="/Projeto Agru/Programacao-web/html/ultimas-noticiais.html">
+                    <i class="fa-solid fa-globe"></i><span>Últimas notícias</span>
                 </a>
-                <a href="#">
-                    <i class="fa-solid fa-comments"></i> Fórum
+                <a href="/Projeto Agru/Programacao-web/html/forum.html">
+                    <i class="fa-solid fa-comments"></i><span>Fórum</span>
                 </a>
-                <a href="/html/marketplace.html">
-                    <i class="fa-solid fa-store"></i> Marketplace
+                <a href="/Projeto Agru/Programacao-web/html/marketplace.html">
+                    <i class="fa-solid fa-store"></i> <span>Marketplace</span>
                 </a>
-                <a href="#">
-                    <i class="fa-solid fa-earth-americas"></i> Diversidade Agru
+                <a href="/Projeto Agru/Programacao-web/html/diversidade-agru.html">
+                    <i class="fa-solid fa-earth-americas"></i><span>Diversidade Agru</span>
                 </a>
-                <a href="#">Veja Mais</a>
-            </div>
+                </a>
+                <a href="#"><span>Veja Mais...</span></a>
+            </nav>
         </aside>
         <main>
             <section id="hero">
                 <section id="artigos">
-                    <div class="tags-informativas">
-                        <!-- Retângulo 1 -->
-                        <div class="box">
-                            <img src="./imagens/eventoPlaneetasLindos.jpeg" alt="Imagem 1">
-                            <h3>Título 1</h3>
-                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                    <div class="carousel-container">
+                        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>  <!-- Botão de voltar -->
+                        <div class="carousel">
+                            <div class="tags-informativas">
+                                <div class="box">
+                                    <img src="./imagens/eventoPlaneetasLindos.jpeg" alt="Imagem 1">
+                                    <h3>Título 1</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                                </div>
+                                <div class="box">
+                                    <img src="./imagens/imagemDaVista.jpeg" alt="Imagem 2">
+                                    <h3>Título 2</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
+                                </div>
+                                <div class="box">
+                                    <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
+                                    <h3>Título 3</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                                </div>
+                                <div class="box">
+                                    <img src="./imagens/hortaColheita.jpeg" alt="Imagem 4">
+                                    <h3>Título 4</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 4.</p>
+                                </div>
+                                <div class="box">
+                                    <img src="./imagens/eventoPlaneetasLindos.jpeg" alt="Imagem 1">
+                                    <h3>Título 5</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                                </div>
+                                <div class="box">
+                                    <img src="./imagens/imagemDaVista.jpeg" alt="Imagem 2">
+                                    <h3>Título 6</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
+                                </div>
+                                <div class="box">
+                                    <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
+                                    <h3>Título 7</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                                </div>
+                                <div class="box">
+                                    <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
+                                    <h3>Título 8</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                                </div>
+                                <div class="box">
+                                    <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
+                                    <h3>Título 9</h3>
+                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                                </div>
+                            </div>
+                            <!-- Mais cartões aqui, se necessário -->
                         </div>
-                
-                        <!-- Retângulo 2 -->
-                        <div class="box">
-                            <img src="./imagens/imagemDaVista.jpeg" alt="Imagem 2">
-                            <h3>Título 2</h3>
-                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
-                        </div>
-                
-                        <!-- Retângulo 3 -->
-                        <div class="box">
-                            <img src="./imagens/hortaColheita.jpeg" alt="Imagem 3">
-                            <h3>Título 3</h3>
-                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
-                        </div>
+                        <button class="next" onclick="moveSlide(1)">&#10095;</button>  <!-- Botão de avançar -->
                     </div>
-                    <div class="tags-informativas">
-                        <!-- Retângulo 1 -->
-                        <div class="box">
-                            <img src="./imagens/climaGeladoSeco.jpeg" alt="Imagem 1">
-                            <h3>Título 1</h3>
-                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
-                        </div>
-                
-                        <!-- Retângulo 2 -->
-                        <div class="box">
-                            <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 2">
-                            <h3>Título 2</h3>
-                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
-                        </div>
-                
-                        <!-- Retângulo 3 -->
-                        <div class="box">
-                            <img src="./imagens/nascerDoSol.jpeg" alt="Imagem 3">
-                            <h3>Título 3</h3>
-                            <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
-                        </div>
-                    </div>
-                    <a href="#">Veja Mais</a>
-                </section>                   
+                </section>                  
                 <section id="forum">
                     <section id="discussoes">
+                        <h2>Principais conversas da semana</h2>
                         <div class="postagem">
                             <div class="usuario">
                                 <img class="foto-user" src="./imagens/fotoPerfil03.jpeg" alt="Perfil de Victor Gabriel">
@@ -132,9 +165,9 @@
                                 <p>Boa tarde, pessoal! Tenho enfrentado dificuldades com o sistema de irrigação automatizado que instalei, alguém tem alguma recomendação de ajustes?</p>
                             </div>
                             <div class="interacoes">
-                                <button><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
-                                <button><i class="fa-solid fa-comment"></i> Comentar</button>
-                                <button><i class="fa-solid fa-share"></i> Compartilhar</button>
+                                <button><i class="fa-solid fa-thumbs-up"></i> <span>Curtir</span></button>
+                                <button><i class="fa-solid fa-comment"></i> <span>Comentar</span> </button>
+                                <button><i class="fa-solid fa-share"></i> <span>Compartilhar</span> </button>
                             </div>
                         </div>
                         <div class="postagem">
@@ -203,7 +236,7 @@
         <p>Site feito para conectar habitantes do planeta Agru</p>
         <p>Agru©2264</p>
     </footer>
-
+    <script src="/Projeto Agru/Programacao-web/js/index.js"></script>
     <script src="https://kit.fontawesome.com/fe81a2bc32.js" crossorigin="anonymous"></script>
 </body>
 </html>

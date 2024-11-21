@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum de Discussão</title>
+    <link rel="stylesheet" href="/Projeto Agru/Programacao-web/css/estilo-do-forum.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu-topo">
+            <div class="menu-logo">
+                <a href="/Projeto Agru/Programacao-web/index.html"><img src="/Projeto Agru/Programacao-web/imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"></a>
+            </div>
+            <form action="/pesquisa" method="get" class="barra-pesquisa">
+                <input type="search" name="q" placeholder="Busque assuntos..." aria-label="Buscar Assuntos"
+                    class="input-pesquisa">
+                <button type="submit" class="btn-pesquisa">Pesquisar</button>
+            </form>
+            <div class="acessar-carrinho">
+                <form action="/Projeto Agru/Programacao-web/html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="intro">
+            <h2>Bem-vindo ao Fórum!</h2>
+            <p>Aqui você pode discutir diversos tópicos com outros membros. Sinta-se à vontade para começar ou responder discussões!</p>
+        </section>
+
+        <section class="topicos">
+            <h2>Principais Tópicos</h2>
+            <div class="topico">
+                <h3><a href="#">Inovações Tecnológicas Transformam a Agricultura Familiar?</a></h3>
+                <p>Última resposta: 5 minutos atrás por João</p>
+            </div>
+            <div class="topico">
+                <h3><a href="#">Cultivo Inteligente: A Era da Agricultura de Precisão o que é isso?</a></h3>
+                <p>Última resposta: 2 horas atrás por Maria</p>
+            </div>
+            <div class="topico">
+                <h3><a href="#">Como Agricultores Enfrentam Secas Prolongadas?</a></h3>
+                <p>Última resposta: 1 dia atrás por Lucas</p>
+            </div>
+            <div class="topico">
+                <h3><a href="#">Como a agricultura regenerativa funciona no Agru?</a></h3>
+                <p>Última resposta: 5 minutos atrás por João</p>
+            </div>
+            <div class="topico">
+                <h3><a href="#">Feiras de Agricultura Sustentável Estimulam Troca de Conhecimentos?</a></h3>
+                <p>Última resposta: 2 horas atrás por Maria</p>
+            </div>
+            <div class="topico">
+                <h3><a href="#">Plantas medicinais são fontes de renda?</a></h3>
+                <p>Última resposta: 1 dia atrás por Lucas</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Fórum de Discussão - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,494 @@
+/* Aqui vamos definir o estilo do nosso marketplace */
+/* Explore a paleta de cores (#547FB0, #4EB1E7, #7AD3DC, #F2F2F2, #333333) e tipografia (Títulos: Inter; Sub-títulos: Roboto; Texto: Lato) para criar um design coerente com a temática. Utilize unidades relativas nas medidas. Organize o código CSS para ser legível e fácil de entender. Teste o design em diferentes navegadores e dispositivos. */
+
+/* Import das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Definição de variáveis de estilo*/
+:root {
+    --cor-principal: #4EB1E7;
+    /* Azul meio termo*/
+    --cor-secundaria: #7AD3DC;
+    /* Azul claro*/
+    --cor-fundo: #547FB0;
+    /* Azul escuro*/
+    --cor-texto: #333333;
+    /* Cor do texto */
+    --cor-fundo-branco: #F2F2F2;
+    /* Cor de fundo branco */
+    --fonte-titulo: 'Inter';
+    --fonte-sub-titulo: 'Roboto';
+    --fonte-texto: 'lato';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo-);
+}
+
+/* Estilização básica do header */
+.header {
+    position: fixed;  /* Faz o cabeçalho ficar fixo */
+    top: 0;  /* Fica no topo da página */
+    width: 100vw;  /* Largura total da página */
+    background-color: white;  /* Cor de fundo */
+    padding: 15px 30px;  /* Espaçamento interno */
+    border-bottom: 2px solid #e0e0e0;  /* Linha divisória */
+    z-index: 10;  /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Logo */
+.menu-logo .logo {
+    width: 200px;
+    padding: 10px 0;
+    height: auto;
+}
+
+/* Menu topo */
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+    display: flex;
+}
+
+.input-pesquisa {
+    width: 20vw;
+    height: 35px;
+    max-height: 40px;
+    margin: 0px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.btn-pesquisa {
+    margin: 0;
+    padding: 0;
+    width: 9vw;
+    height: 35px;
+    border: none;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    background-color: var(--cor-fundo);
+    transition: background-color 0.3s;
+}
+
+.btn-pesquisa:hover {
+    transition: background-color 0.3s;
+    background-color: #003f88;
+}
+
+/* Botões de acesso e carrinho */
+.acessar-carrinho {
+    display: flex;
+    justify-content: center;
+}
+
+.acessar-carrinho button {
+    background-color: var(--cor-fundo);
+    /* Azul para botões */
+    color: #fff;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-acessar:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        position: static;
+        width: 100%;
+        background-color: white;
+        /* Cor de fundo clara */
+        padding: 15px 30px;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .menu-topo {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .menu-logo .logo {
+        width: 200px;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .barra-pesquisa {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .input-pesquisa{
+        width: 40%;
+    }
+
+    .btn-pesquisa {
+        width: 21%;
+    }
+
+    .acessar-carrinho {
+        padding: 2% 20%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 440px) {
+    .input-pesquisa{
+        width: 50%;
+    }
+
+    .btn-pesquisa {
+        width: 27%;
+    }
+
+    .acessar-carrinho {
+        padding: 4% 10%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Artigo principal */
+.principal {
+    padding: 20px;
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.artigo-principal img {
+    background-size: cover;
+    margin-top: 100px;
+    width: 100%;
+    height: 60vh;
+    border-radius: 8px;
+}
+
+.artigo-principal h2 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+.artigo-principal p {
+    color: #555;
+}
+
+.artigo-principal a {
+    color: var(--cor-fundo);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Seção de Categorias */
+.categorias {
+    padding: 20px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.categorias h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.categoria {
+    margin-bottom: 20px;
+}
+
+.categoria h3 a {
+    font-size: 1.3rem;
+    color: var(--cor-fundo);
+    text-decoration: none;
+}
+
+.categoria h3 a:hover {
+    color: #0851a3;
+}
+
+.categoria ul {
+    list-style: none;
+}
+
+.categoria ul li {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.categoria ul li a {
+    color: #555;
+    text-decoration: none;
+}
+
+.categoria ul li a:hover {
+    color: #0851a3;
+}
+
+/* Seção de Últimas Notícias */
+.ultimas-noticias {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ultimas-noticias h2 {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
+.noticia {
+    width: 60%;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.noticia img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.noticia h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.noticia a {
+    color: var(--cor-fundo);
+    text-decoration: none;
+}
+
+.noticia p {
+    color: #666;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
+
+#artigos {
+    width: 100vw; /* Define a largura do carrossel */
+    padding: 40px;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden; /* Evita que o conteúdo ultrapasse os limites do carrossel */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease; /* Transição suave ao mover as caixas */
+}
+
+.tags-informativas {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* Garante que as caixas fiquem em uma linha sem quebra */
+}
+
+.box {
+    width: 25%; /* Cada box ocupa 25% da largura para exibir 4 caixas por vez */
+    min-width: 250px; /* Tamanho mínimo para as caixas */
+    height: 350px; /* Altura ajustada para as caixas */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 15px; /* Espaço entre as caixas */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorcer */
+}
+
+.box h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.box p {
+    font-size: 14px;
+    color: #777;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+#artigos button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente o botão */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1; /* Garante que o botão fique acima das caixas */
+}
+
+button.prev {
+    left: 0; /* Coloca o botão de voltar à esquerda */
+}
+
+button.next {
+    right: 0; /* Coloca o botão de avançar à direita */
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Efeito de hover nos botões */
+}
+
+/* Responsividade do carrossel */
+
+@media (max-width: 1024px) {
+    /* Reduz a largura do menu lateral */
+    main {
+        width: 90vw;
+        padding: 0;
+        margin: 50px 0 0 0px;
+
+    }
+
+    #hero {
+        padding-top: 40px;
+        padding-left: 20px;
+        width: 90%;
+        margin-left: 120px;
+        text-align: center;
+    }
+
+    #artigos {
+        width: 620px; /* Define a largura do carrossel */
+        padding: 40px;
+        text-align: center;
+        margin-left: 120px;
+    }
+
+    .box {
+        width: 15%; /* Cada box ocupa 25% da largura para exibir 4 caixas por vez */
+        min-width: 150px; /* Tamanho mínimo para as caixas */
+        height: 300px; /* Altura ajustada para as caixas */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 15px; /* Espaço entre as caixas */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Reduz a largura do menu lateral */
+    main {
+        width: 90vw;
+        padding: 0;
+        margin: 0px;
+
+    }
+
+    #hero {
+        margin: 0;
+        padding: 0;
+        padding-top: 40px;
+        width: 90%;
+        text-align: center;
+    }
+
+    #artigos {
+        margin: 0;
+        width: 400px; /* Define a largura do carrossel */
+        padding: 40px;
+        text-align: center;
+    }
+
+    .box {
+        width: 5%; /* Cada box ocupa 25% da largura para exibir 4 caixas por vez */
+        min-width: 90px; /* Tamanho mínimo para as caixas */
+        height: 150px; /* Altura ajustada para as caixas */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 10px; /* Espaço entre as caixas */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box p {
+        display: none;
+    }
+
+}
+
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-fundo);
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    position:inherit;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+

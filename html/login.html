@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--Link da biblioteca dos icones-->
+    <link rel="stylesheet" href="/Projeto Agru/Programacao-web/css/estilo-loginlogin.css">
+    <title>Crux Login</title>  
+</head>
+<body>
+    <main class="container">
+        <fieldset>
+            <legend>Login</legend>
+
+            <div class="input-box">  
+              <input placeholder="Usuário" type="email" required>  <!--required é uma maneira de assegurar que a senha seja fornecida pelo usuário antes do envio dos dados.-->
+              <i class="bx bxs-user"></i> <!--Essa é a classe referente ao ícone de usuário-->  
+            </div>  
+
+            <div class="input-box">  
+              <input placeholder="Senha" type="password" required>  
+              <i class="bx bxs-lock-alt"></i> <!--Essa é a classe referente ao ícone de trancado-->  
+            </div>  
+
+            <section class="remember-forgot">  
+                <label>  
+                    <input type="checkbox">  
+                    Lembrar senha  
+                </label>  
+                <a href="#">Esqueci a senha</a>  
+            </section> 
+
+            <button type="submit" class="login">Login</button>
+            
+            <section class="register-link">  
+                <p>Não tem uma conta? <a href="/Projeto Agru/Programacao-web/html/cadastro.html">Cadastre-se</a></p>  
+            </section> 
+
+       </fieldset>
+    </main>
+</body>
+</html>

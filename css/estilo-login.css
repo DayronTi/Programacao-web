@@ -1,0 +1,186 @@
+/* Reset básico e configuração da fonte */
+/* Aqui vamos definir o estilo do nosso marketplace */
+/* Explore a paleta de cores (#547FB0, #4EB1E7, #7AD3DC, #F2F2F2, #333333) e tipografia (Títulos: Inter; Sub-títulos: Roboto; Texto: Lato) para criar um design coerente com a temática. Utilize unidades relativas nas medidas. Organize o código CSS para ser legível e fácil de entender. Teste o design em diferentes navegadores e dispositivos. */
+
+/* Import das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Definição de variáveis de estilo*/
+:root {
+    --cor-principal: #4EB1E7;
+    /* Azul meio termo*/
+    --cor-secundaria: #7AD3DC;
+    /* Azul claro*/
+    --cor-fundo: #547FB0;
+    /* Azul escuro*/
+    --cor-texto: #333333;
+    /* Cor do texto */
+    --cor-fundo-branco: #F2F2F2;
+    /* Cor de fundo branco */
+    --fonte-titulo: 'Inter';
+    --fonte-sub-titulo: 'Roboto';
+    --fonte-texto: 'lato';
+    --cor-texto: #333333;      /* Cor do texto */
+    --fonte-titulo: 'Inter';
+    --fonte-sub-titulo: 'Roboto';
+    --fonte-texto: 'lato';
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+fieldset {
+    border: none;
+}
+
+/* Estilo do body com imagem de fundo */
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/Projeto Agru/Programacao-web/imagens/login-cadastro/background2.jpg');
+    background-size: cover;
+    padding: 1rem;
+    color: black;
+}
+
+/* Estilo do contêiner principal */
+.container {
+    width: 70%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column; /* Direção em coluna */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--cor-fundo-branco);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 2rem; /* Espaçamento interno */
+}
+
+
+/* Estilo do cabeçalho do formulário */
+.form-header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-button button {
+    backdrop-filter: blur(60px);
+    background-color: var(--cor-fundo); /* Fundo azul translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6rem 1.5rem; /* Padding consistente */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-button button:hover {
+    background-color: #0d52d1;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 600; 
+    color: #fff;
+}
+
+/* Estilo do grupo de inputs */
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    width: 48%; /* Espaçamento entre inputs */
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+/* Estilo do grupo de gênero */
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+    width: 100%;
+}
+
+/* Estilo do botão continuar */
+.continue-button {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+}
+
+.continue-button button {
+    width: 45%; /* Largura do botão */
+    margin-top: 2.5rem;
+    background-color: var(--cor-fundo); /* Fundo azul translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px; /* Bordas arredondadas */
+    color: #f2f2f2;
+    padding: 0.8rem; /* Padding consistente */
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #0d52d1;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    display: block; /* Garante que o link ocupe toda a área do botão */
+}
+
+/* Media queries para responsividade */
+@media screen and (max-width: 1080px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        padding-right: 1rem;
+        overflow-y: auto;
+    }
+    .input-box {
+        width: 100%;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+}

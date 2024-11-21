@@ -8,6 +8,7 @@
 
 /*Definição de variáveis de estilo*/
 :root {
+    --cor-de-hover: rgb(22, 82, 160);
     --cor-principal: #4EB1E7;
     /* Azul meio termo*/
     --cor-secundaria: #7AD3DC;
@@ -44,7 +45,8 @@ body {
 
 /* Logo */
 .menu-logo .logo {
-    width: 150px;
+    width: 200px;
+    padding: 10px 0;
     height: auto;
 }
 
@@ -59,50 +61,66 @@ body {
 /* Barra de pesquisa */
 .barra-pesquisa {
     display: flex;
-    align-items: center;
-    flex-grow: 1;
-    max-width: 400px;
-    margin: 0 15px;
 }
 
 .input-pesquisa {
-    flex-grow: 1;
+    width: 20vw;
+    height: 35px;
+    max-height: 40px;
+    margin: 0px;
     padding: 8px 12px;
     border: 1px solid #ccc;
-    border-radius: 90px 0 0 90px;
-    outline: none;
+    border-radius: 5px 0 0 5px;
 }
 
 .btn-pesquisa {
-    background-color: #28a745;
-    /* Verde para destaque */
-    color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 9vw;
+    height: 35px;
     border: none;
-    padding: 8px 16px;
-    border-radius: 0 90px 90px 0;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
+    background-color: var(--cor-fundo);
     transition: background-color 0.3s;
 }
 
 .btn-pesquisa:hover {
-    background-color: #218838;
+    transition: background-color 0.3s;
+    background-color: #003f88;
 }
 
 /* Botões de acesso e carrinho */
+.acessar-carrinho {
+    display: flex;
+    justify-content: center;
+}
+
+.acessar-carrinho a {
+    margin: 0 20px;
+    font-size: 25px;
+    color:var(--cor-fundo);
+}
+
+.acessar-carrinho a:hover {
+    font-size: 25px;
+    color: #003f88;
+}
+
 .acessar-carrinho button {
-    background-color: #007bff;
+    background-color: var(--cor-fundo);
     /* Azul para botões */
     color: #fff;
     border: none;
-    padding: 8px 16px;
-    margin-left: 10px;
+    padding: 9px 16px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.btn-acessar:hover,
-.btn-carrinho:hover {
+.btn-acessar:hover {
     background-color: #0056b3;
 }
 
@@ -118,40 +136,116 @@ body {
 }
 
 .nav-lista {
+    flex-wrap: wrap;
     display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    list-style: none;
+    list-style-type: none;
+    padding: 0;
     margin: 0;
 }
 
+.nav-linha {
+    flex: 1 1 100px;
+    margin: 2px 5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Links*/
 .nav-item {
-    color: #fff;
-    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    display: block;
     padding: 5px 15px;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav-item:hover {
     color: #ffc107;
     /* Amarelo para hover */
-    border-bottom: 2px solid #ffc107;
+}
+
+/* Elementos escondidos por responsividade */
+.menu-nav button {
+    display: none;
+}
+
+.menu-nav .responsivo {
+    display: none;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .menu-topo {
+        margin: 0;
+        padding: 0;
         flex-direction: column;
-        align-items: flex-start;
     }
 
     .barra-pesquisa {
+        display: flex;
+        justify-content: center;
         width: 100%;
         margin: 10px 0;
     }
 
+    .input-pesquisa{
+        width: 40%;
+    }
+
+    .btn-pesquisa {
+        width: 21%;
+    }
+
     .acessar-carrinho {
-        margin-top: 10px;
+        padding: 2% 20%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .acessar-carrinho a {
+        margin: 0 20px;
+        font-size: 25px;
+        color:var(--cor-fundo);
+    }
+
+    .menu-nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .menu-nav button {
+        display: block;
+        background-color: #ffffff00;
+        border: none;
+        color: white;
+        font-weight: 500;
+    }
+
+    .nav-lista {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .input-pesquisa{
+        width: 50%;
+    }
+
+    .btn-pesquisa {
+        width: 27%;
+    }
+
+    .acessar-carrinho {
+        padding: 4% 10%;
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -169,9 +263,59 @@ body {
 
 /* Estilização da seção de ofertas */
 .melhores-ofertas {
-    padding: 2rem;
-    background-color: var(--cor-fundo-branco);
+    text-align: center;
 }
+
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ocultar itens fora da área visível */
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease; /* Animação suave */
+}
+
+.card-oferta {
+    width: 100%;
+    flex-shrink: 0; /* Impede que os itens encolham */
+    margin: 0 10px; /* Espaçamento entre os itens */
+    text-align: center;
+}
+
+.imagem-produto {
+    width: 100%;
+    max-width: 300px; /* Tamanho máximo da imagem */
+    margin-bottom: 15px;
+}
+
+.carrossel-prev, .carrossel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carrossel-prev {
+    left: 10px;
+}
+
+.carrossel-next {
+    right: 10px;
+}
+
+
+
+
+
+
 
 .titulo-secao {
     font-family: var(--fonte-titulo);
@@ -461,12 +605,14 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+
 }
 
 .input-newsletter {
     padding: 8px 12px;
     border: none;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
+    margin: 10px;
     outline: none;
 }
 
@@ -475,13 +621,13 @@ body {
     color: #fff;
     border: none;
     padding: 8px 16px;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .btn-newsletter:hover {
-    background-color: #218838;
+    background-color: rgb(22, 82, 160);
 }
 
 /* Responsividade da seção newsletter*/
@@ -547,6 +693,12 @@ body {
     text-align: center;
     font-size: 0.8rem;
     color: #666666;
+}
+
+.footer i {
+    margin: 10px;
+    text-decoration: none;
+    color: var(--cor-fundo);
 }
 
 .footer-logo img {

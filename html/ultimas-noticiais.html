@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias</title>
+    <link rel="stylesheet" href="/Projeto Agru/Programacao-web/css/estilo-do-portal.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu-topo">
+            <div class="menu-logo">
+                <a href="/Projeto Agru/Programacao-web/index.html"><img src="/Projeto Agru/Programacao-web/imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"></a>
+            </div>
+            <form action="#" method="get" class="barra-pesquisa">
+                <input type="search" name="q" placeholder="Busque assuntos..." aria-label="Buscar Assuntos"
+                    class="input-pesquisa">
+                <button type="submit" class="btn-pesquisa">Pesquisar</button>
+            </form>
+            <div class="acessar-carrinho">
+                <form action="/Projeto Agru/Programacao-web/html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="principal">
+            <div class="artigo-principal">
+                <img src="/Projeto Agru/Programacao-web/imagens/login-cadastro/background2.jpg" alt="Notícia Principal">
+                <h2>Notícia Principal do Dia</h2>
+                <p>Hoje, o mundo presenciou um evento marcante na área de ciência e tecnologia, que poderá mudar o futuro de...</p>
+                <a href="#">Leia mais...</a>
+            </div>
+        </section>
+
+    <!-- Seção de Últimas Notícias -->
+    </main>
+    <section id="artigos">
+        <div class="carousel-container">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>  <!-- Botão de voltar -->
+            <div class="carousel">
+                <div class="tags-informativas">
+                    <div class="box">
+                        <img src="./imagens/eventoPlaneetasLindos.jpeg" alt="Imagem 1">
+                        <h3>Título 1</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                    </div>
+                    <div class="box">
+                        <img src="./imagens/imagemDaVista.jpeg" alt="Imagem 2">
+                        <h3>Título 2</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
+                    </div>
+                    <div class="box">
+                        <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
+                        <h3>Título 3</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                    </div>
+                    <div class="box">
+                        <img src="./imagens/hortaColheita.jpeg" alt="Imagem 4">
+                        <h3>Título 4</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 4.</p>
+                    </div>
+                    <div class="box">
+                        <img src="./imagens/eventoPlaneetasLindos.jpeg" alt="Imagem 1">
+                        <h3>Título 5</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                    </div>
+                    <div class="box">
+                        <img src="./imagens/imagemDaVista.jpeg" alt="Imagem 2">
+                        <h3>Título 6</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
+                    </div>
+                    <div class="box">
+                        <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
+                        <h3>Título 7</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                    </div>
+                    <div class="box">
+                        <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
+                        <h3>Título 8</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                    </div>
+                    <div class="box">
+                        <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
+                        <h3>Título 9</h3>
+                        <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                    </div>
+                </div>
+                <!-- Mais cartões aqui, se necessário -->
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>  <!-- Botão de avançar -->
+        </div>
+    </section>
+
+        <!-- Seção de Categorias -->
+        <section class="categorias">
+            <h2>Categorias</h2>
+            <div class="categoria">
+                <h3><a href="#">Intergaláticas</a></h3>
+                <ul>
+                    <li><a href="#">A guerra entra planetas continua acontecendo na galáxia 045.</a></li>
+                    <li><a href="#">Economia intergalática em crise, o que esperar nos próximos anos?</a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3><a href="#">Tecnologia</a></h3>
+                <ul>
+                    <li><a href="#">A crux lança o seu primeiro site para os habitantes do Agru</a></li>
+                    <li><a href="#">Pesquisadores criam inteligência artificial revolucionária</a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3><a href="#">Esportes</a></h3>
+                <ul>
+                    <li><a href="#">Os recém habitantes de Agru já estão criando práticas esportivas</a></li>
+                    <li><a href="#">O que é AGRUBOOL? esporte que vem se tornando presente no dia a dia Agruense</a></li>
+                </ul>
+            </div>
+            <div class="categoria">
+                <h3><a href="#">Regional</a></h3>
+                <ul>
+                    <li><a href="#">Entenda o porquê do planeta Agru ser divididos em regiões</a></li>
+                    <li><a href="#">Qual a região melhor para colheita?</a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3><a href="#">Verde</a></h3>
+                <ul>
+                    <li><a href="#">Inoavações em hortas e novas variedades de legumes</a></li>
+                    <li><a href="#">Qual a fruta mais famosa do planeta Agru?</a></li>
+                </ul>
+            </div>
+
+            <div class="categoria">
+                <h3><a href="#">Terra</a></h3>
+                <ul>
+                    <li><a href="#">O que aconteceu com a terra?</a></li>
+                </ul>
+            </div>
+        </section>
+
+        
+
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Portal de Notícias - Todos os direitos reservados</p>
+    </footer>
+    <script src="/Projeto Agru/Programacao-web/js/index.js"></script>
+</body>
+</html>

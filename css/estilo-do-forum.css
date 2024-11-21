@@ -1,0 +1,247 @@
+/* Aqui vamos definir o estilo do nosso marketplace */
+/* Explore a paleta de cores (#547FB0, #4EB1E7, #7AD3DC, #F2F2F2, #333333) e tipografia (Títulos: Inter; Sub-títulos: Roboto; Texto: Lato) para criar um design coerente com a temática. Utilize unidades relativas nas medidas. Organize o código CSS para ser legível e fácil de entender. Teste o design em diferentes navegadores e dispositivos. */
+
+/* Import das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Definição de variáveis de estilo*/
+:root {
+    --cor-principal: #4EB1E7;
+    /* Azul meio termo*/
+    --cor-secundaria: #7AD3DC;
+    /* Azul claro*/
+    --cor-fundo: #547FB0;
+    /* Azul escuro*/
+    --cor-texto: #333333;
+    /* Cor do texto */
+    --cor-fundo-branco: #F2F2F2;
+    /* Cor de fundo branco */
+    --fonte-titulo: 'Inter';
+    --fonte-sub-titulo: 'Roboto';
+    --fonte-texto: 'lato';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo-);
+}
+
+/* Estilização básica do header */
+.header {
+    position: fixed;  /* Faz o cabeçalho ficar fixo */
+    top: 0;  /* Fica no topo da página */
+    width: 100vw;  /* Largura total da página */
+    background-color: white;  /* Cor de fundo */
+    padding: 15px 30px;  /* Espaçamento interno */
+    border-bottom: 2px solid #e0e0e0;  /* Linha divisória */
+    z-index: 10;  /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Logo */
+.menu-logo .logo {
+    width: 200px;
+    padding: 10px 0;
+    height: auto;
+}
+
+/* Menu topo */
+.menu-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+    display: flex;
+}
+
+.input-pesquisa {
+    width: 20vw;
+    height: 35px;
+    max-height: 40px;
+    margin: 0px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.btn-pesquisa {
+    margin: 0;
+    padding: 0;
+    width: 9vw;
+    height: 35px;
+    border: none;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    background-color: var(--cor-fundo);
+    transition: background-color 0.3s;
+}
+
+.btn-pesquisa:hover {
+    transition: background-color 0.3s;
+    background-color: #003f88;
+}
+
+/* Botões de acesso e carrinho */
+.acessar-carrinho {
+    display: flex;
+    justify-content: center;
+}
+
+.acessar-carrinho button {
+    background-color: var(--cor-fundo);
+    /* Azul para botões */
+    color: #fff;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-acessar:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        position: static;
+        width: 100%;
+        background-color: white;
+        /* Cor de fundo clara */
+        padding: 15px 30px;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .menu-topo {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .menu-logo .logo {
+        width: 200px;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .barra-pesquisa {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .input-pesquisa{
+        width: 40%;
+    }
+
+    .btn-pesquisa {
+        width: 21%;
+    }
+
+    .acessar-carrinho {
+        padding: 2% 20%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 440px) {
+    .input-pesquisa{
+        width: 50%;
+    }
+
+    .btn-pesquisa {
+        width: 27%;
+    }
+
+    .acessar-carrinho {
+        padding: 4% 10%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Seção de Introdução */
+.intro {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.intro p {
+    color: #666;
+}
+
+/* Seção de Tópicos */
+.topicos {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topicos h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.topico {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-fundo);
+}
+
+.topico h3 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.topico h3 a:hover {
+    color: #1360b9;
+}
+
+.topico p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
