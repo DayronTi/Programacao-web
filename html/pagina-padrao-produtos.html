@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgruHub - Marketplace</title>
+    <link rel="icon" href="./imagens/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/estilo-pagina-padrao-produtos.css"/>
+  </head>
+  <body>
+    <!-- Início do cabeçalho -->
+    <header class="header">
+        <div class="menu-topo">
+            <div class="menu-logo">
+                <a href="/index.html"><img src="/imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"/></a>
+            </div>
+                <form action="/pesquisa" method="get" class="barra-pesquisa">
+                    <input type="search" name="q" placeholder="Buscar produtos..." aria-label="Buscar produtos" class="input-pesquisa"/>
+                    <button type="submit" class="btn-pesquisa">Pesquisar</button>
+                </form>
+                <div class="acessar-carrinho">
+                    <form action="/html/cadastro.html">
+                        <button href class="btn-acessar">Acessar / Cadastrar</button>
+                    </form>
+                <a href="/html/carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+      <nav class="menu-nav">
+        <ul class="nav-lista">
+          <li class="nav-linha">
+            <a href="#" class="nav-item">Fertilizantes Especiais</a>
+          </li>
+          <li class="nav-linha"><a href="#" class="nav-item">Sementes</a></li>
+          <li class="nav-linha">
+            <a href="#" class="nav-item">Ferramentas</a>
+          </li>
+          <li class="nav-linha"><a href="#" class="nav-item">Rações</a></li>
+          <li class="nav-linha">
+            <a href="#" class="nav-item">Pragas e Insetos</a>
+          </li>
+          <li class="nav-linha"><a href="#" class="nav-item">Irrigação</a></li>
+          <li class="nav-linha">
+            <a href="#" class="nav-item">Suprimentos</a>
+          </li>
+          <li class="nav-linha">
+            <a href="#" class="nav-item">Produtos locais</a>
+          </li>
+          <li class="nav-linha">
+            <a href="#" class="nav-item">Serviços Especializados</a>
+          </li>
+        </ul>
+        <button class="ver-categorias">
+          Ver categorias <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <ul class="nav-lista responsivo">
+          <li><a href="#" class="nav-item">Fertilizantes Especiais</a></li>
+          <li><a href="#" class="nav-item">Sementes</a></li>
+          <li><a href="#" class="nav-item">Ferramentas</a></li>
+          <li><a href="#" class="nav-item">Rações</a></li>
+          <li><a href="#" class="nav-item">Pragas e Insetos</a></li>
+          <li><a href="#" class="nav-item">Irrigação</a></li>
+          <li><a href="#" class="nav-item">Suprimentos</a></li>
+          <li><a href="#" class="nav-item">Produtos locais</a></li>
+          <li><a href="#" class="nav-item">Serviços Especializados</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Fim do cabeçalho -->
+    <main>
+      <!--- Banner de promoções -->
+      <section class="banners">
+        <!-- Container para o carrossel -->
+        <div class="container-slider">
+            <button id="prev-button"><i class="fa-solid fa-angle-left"></i></button>
+            <div class="container-imagens">
+                <img src="/imagens/BLACK-AGRU-FRIDAY (3240 x 1080 px) (600 x 300 px) (1000 x 400 px) (1080 x 270 px)/banner2.png" alt="banner 1" class="slider on"/>
+                <img src="/imagens/BLACK-AGRU-FRIDAY (3240 x 1080 px) (600 x 300 px) (1000 x 400 px) (1080 x 270 px)/banner2 (2).png" alt="banner 2" class="slider"/>
+                <img src="/imagens/BLACK-AGRU-FRIDAY (3240 x 1080 px) (600 x 300 px) (1000 x 400 px) (1080 x 270 px)/banner1.png" alt="banner 3" class="slider"/>
+            </div>
+            <button id="next-button"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+      </section>
+      <!-- Seção de Produtos -->
+      <div class="container">
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200" alt="Produto 1">
+            <div class="info">
+                <h3>Produto 1</h3>
+                <p>R$ 99,99</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200" alt="Produto 2">
+            <div class="info">
+                <h3>Produto 2</h3>
+                <p>R$ 149,99</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200" alt="Produto 3">
+            <div class="info">
+                <h3>Produto 3</h3>
+                <p>R$ 249,99</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200" alt="Produto 4">
+            <div class="info">
+                <h3>Produto 4</h3>
+                <p>R$ 59,99</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200" alt="Produto 1">
+            <div class="info">
+                <h3>Produto 1</h3>
+                <p>R$ 99,99</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200" alt="Produto 2">
+            <div class="info">
+                <h3>Produto 2</h3>
+                <p>R$ 149,99</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200" alt="Produto 3">
+            <div class="info">
+                <h3>Produto 3</h3>
+                <p>R$ 249,99</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250x200" alt="Produto 4">
+            <div class="info">
+                <h3>Produto 4</h3>
+                <p>R$ 59,99</p>
+                <button onclick="addToCart()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+      
+         
+      <!-- Seção de Newsletter - Área para cadastro de usuários interessados em receber novidades -->
+      <section class="newsletter">
+        <h2 class="titulo-secao-newsletter">
+          Receba nossas novidades e ofertas exclusivas
+        </h2>
+        <!-- Container do formulário de newsletter -->
+        <div class="container-newsletter">
+          <!-- Formulário de inscrição na newsletter -->
+          <form action="/newsletter" method="post" class="form-newsletter">
+            <!-- Campo para entrada do nome do usuário -->
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              class="input-newsletter"
+              placeholder="Digite seu nome"
+            />
+            <!-- Campo para entrada do email do usuário -->
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input-newsletter"
+              placeholder="Digite seu e-mail"
+            />
+            <!-- Botão para enviar o formulário -->
+            <button type="submit" class="btn-newsletter">Cadastrar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Seção de atendimento ao cliente com links importantes -->
+        <div class="footer-secao atendimento">
+          <h3>Atendimento</h3>
+          <p><i class="fa-solid fa-clock"></i> Seg à Sex das 8h às 17:45</p>
+          <p><i class="fa-solid fa-phone"></i> (00) 1234-5678</p>
+          <p><i class="fa-solid fa-envelope"></i> sac@agruhub.com.ag</p>
+          <p><i class="fa-solid fa-envelope"></i> ouvidoria@agruhub.com.ag</p>
+        </div>
+        <!-- Links institucionais -->
+        <div class="footer-secao institucional">
+          <h3>Institucional</h3>
+          <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+            <li><a href="#">Avaliações</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <!-- Seção de informacoes com links para documentos importantes -->
+        <div class="footer-secao informacoes">
+          <h3>Informações</h3>
+          <ul>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Entregas</a></li>
+            <li><a href="#">Pagamentos</a></li>
+            <li><a href="#">Compra Segura</a></li>
+          </ul>
+        </div>
+        <!-- Links para redes sociais -->
+        <div class="footer-secao redes">
+          <h3>Siga nossas redes</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Xwitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <!-- Seção que mostra os métodos de pagamento aceitos -->
+      <div class="footer-pagamentos">
+        <h3>Formas de Pagamento</h3>
+        <div class="payment-icons">
+          <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
+          <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+          <a href="#"><i class="fa-brands fa-pix"></i></a>
+          <a href="#"><i class="fa-regular fa-file"></i></a>
+        </div>
+      </div>
+      <!-- Seção de segurança com ícones de certificados e selos de segurança -->
+      <div class="footer-seguranca">
+        <h3>Segurança</h3>
+        <div class="seguranca-icons">
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+          <a href="#"><i class="fa-solid fa-shield"></i></a>
+          <a href="#"><i class="fa-solid fa-certificate"></i></a>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-legal">
+        <div class="footer-logo">
+          <a href="/index.html"
+            ><img src="/imagens/AgruHUB-logo2.svg" alt="Logo do site"
+          /></a>
+        </div>
+        <p>
+          Agruhub atua desde XXVVMIII para atender às necessidades de clientes
+          em todo o planeta Agru.
+        </p>
+        <p>
+          &reg; AgruHUB Marketplace | CNPJ: 77.777.777/0007-77 - Todos os
+          direitos reservados.
+        </p>
+        <p>Powered by Crux &copy; 2024 - Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/fe81a2bc32.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/marketplace.js" defer></script>
+  </body>
+</html>
+</body>
+</html>

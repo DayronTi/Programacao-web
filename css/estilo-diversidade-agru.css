@@ -1,0 +1,121 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a tipografia e cores principais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ff7f50;
+}
+
+/* Seção de Sobre */
+#sobre {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#sobre h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Seção de Galeria de Fotos */
+#lugares {
+    padding: 50px 0;
+    background-color: #eaeaea;
+}
+
+#lugares h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo {
+    text-align: center;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Seção de Contato */
+#contato {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1.2em;
+}

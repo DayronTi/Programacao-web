@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Chama a função de verificação sempre que carregar a página
   checkForm();
 });
-
 window.addEventListener("scroll", function () {
   const footer = document.querySelector("footer");
   const scrollPosition = window.scrollY + window.innerHeight; // Posição do scroll + altura da janela
@@ -35,6 +34,14 @@ window.addEventListener("scroll", function () {
     footer.classList.remove("show"); // Esconde o footer caso não esteja no final
   }
 });
+
+
+
+
+
+
+
+
 
 //Código do menu inicial
 let currentIndex = 0; // Índice inicial do carrossel
@@ -72,66 +79,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//Códgifo do marketplace
-const vercategorias = document.querySelector(".ver-categorias");
-const mensagem = document.querySelector(".ver-categorias");
 
-// Adiciona o evento de clique
-vercategorias.addEventListener("click", () => {
-  // Verifica se o layout está no modo responsivo (por exemplo, max-width: 768px)
-  if (window.innerWidth <= 768) {
-    // Seleciona a lista de categorias
-    const categorias = document.querySelector(".nav-lista");
+//CARROSSEL DE NOTÌCIAS
+new Swiper('.card-wrapper', {
+  loop: true,
+  spaceBetween: 30,
 
-    // Obtém o estilo calculado da lista de categorias
-    const estilo = window.getComputedStyle(categorias);
+  // Paginação de cards
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-    // Alterna a visibilidade da lista
-    if (estilo.display === "block" || estilo.display === "flex") {
-      // Se as categorias estão visíveis, esconda-as e coloque "Ver categorias"
-      categorias.style.display = "none";
-      mensagem.innerHTML =
-        'Ver categorias <i class="fa-solid fa-angle-down"></i>';
-    } else {
-      // Caso contrário, exiba as categorias e mostre "Esconder categorias"
-      categorias.style.display = "block"; // ou 'flex', dependendo do seu layout
-      mensagem.innerHTML =
-        'Esconder categorias <i class="fa-solid fa-angle-up"></i>';
-    }
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    },
   }
 });
-
-const carrossel = document.querySelector(".carrossel");
-const prevButton = document.querySelector(".carrossel-prev");
-const nextButton = document.querySelector(".carrossel-next");
-const items = document.querySelectorAll(".card-oferta");
-let inicioProduto = 0;
-
-// Função para atualizar a posição do carrossel
-function updateCarrosselPosition() {
-  const itemWidth = items[0].offsetWidth + 20; // Largura do item + margem
-  carrossel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-}
-
-// Função para ir para o próximo item
-nextButton.addEventListener("click", () => {
-  if (currentIndex < items.length - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0; // Volta para o primeiro item
-  }
-  updateCarrosselPosition();
-});
-
-// Função para ir para o item anterior
-prevButton.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = items.length - 1; // Vai para o último item
-  }
-  updateCarrosselPosition();
-});
-
-// Inicializar a posição do carrossel
-updateCarrosselPosition();

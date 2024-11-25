@@ -369,16 +369,94 @@ main {
     width: 100%;
     margin: 30px 0px 0px 30px;
     padding: 0;
+    padding-top: 40px;
+    background-color: white;
+}
+
+
+/* INICIANDO QUADRO DE NOTÍCIAS */
+.quadros-de-noticias {
+    display: flex;
+    justify-items: center;
+    background-color: #33333300;;
+    width: 90%;
+    height: 300px;
+    margin: auto;
+}
+
+.quadros-de-noticias-em-texto {
+    color: white;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+}
+
+.quadros-de-noticias-em-texto:hover {
+    color: white;
+    border-radius: 5px;
+    margin: 0;
+    padding: 25px;
+    background-color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.quadros-de-noticias-em-fotos {
+    color: white;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.primeiro-quadro {
+    color: white;
+    height: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 3px;
+    background-image: url(/imagens/imagens-quadro/planetaTerrraCheriodefumaca.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+
+.primeiro-quadro:hover, .segundo-quadro:hover {
+    color: white;
+    height: 50%;
+    padding: 25px;
+    cursor: pointer;
+    margin: 0;  
+}
+
+.segundo-quadro{   
+    color: white;
+    height: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 3px;
+    background-image: url(/imagens/imagens-quadro/plantacoes.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* CARROSSEL DE NOTÍCIAS */
+.container {
+    width: 600px;
 }
 
 /* Notícias principais */
 #artigos {
     width: 60vw; /* Define a largura do carrossel */
-    padding: 40px;
+    padding: 50px;
     text-align: center;
+    margin: auto;
 }
 
 .carousel-container {
+    text-align: center;
     position: relative;
     max-width: 100%;
     margin: auto;
@@ -434,13 +512,17 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%); /* Centraliza verticalmente o botão */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background-color: var(--cor-fundo);
+    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
     z-index: 1; /* Garante que o botão fique acima das caixas */
+}
+
+#artigos button:hover {
+    font-size: 35px;
 }
 
 button.prev {
@@ -456,7 +538,6 @@ button:hover {
 }
 
 /* Responsividade do carrossel */
-
 @media (max-width: 1024px) {
     /* Reduz a largura do menu lateral */
     main {
@@ -539,46 +620,31 @@ button:hover {
     .box p {
         display: none;
     }
-    
-
 }
 
 /* Estilo para a área principal do fórum */
-#forum {
-    display: flex;
-    justify-content: center;
-    padding: 40px 0;
-    background-color: #f4f4f4;
-}
-
 /* A seção de discussões onde as postagens vão aparecer */
-#discussoes {
-    width: 80%;
-    max-width: 900px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.forum-discussao {
+padding: 30px;
 }
 
-#discussoes h2 {
-    color: var(--cor-fundo);
-    margin: 20px 0;
+.forum-discussao h2, #artigos h2 {
     text-align: center;
+    padding: 30px 0;
 }
 
 .postagem {
     background-color: #fff;
     margin-bottom: 30px;
-    padding: 15px;
+    padding: 50px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .postagem:hover {
     transform: scale(1.03);
     background-color: rgb(250, 250, 250);
-
 }
 
 .usuario {
@@ -608,7 +674,7 @@ button:hover {
 
 /* Conteúdo da postagem */
 .conteudo-postagem h2 {
-    font-size: 20px;
+    font-size:20px;
     color: var(--cor-principal);
     margin-bottom: 10px;
 }
@@ -726,10 +792,9 @@ button:hover {
     }
 } 
 
-
 /* Iniciando menu lateral da esquerda */
 #noticias {
-    margin-top: 150px;
+    margin-top: 100px;
     width: 20%; /* Largura fixa para a seção de notícias */
     max-width: 300px;
     background-color: white; /* Cor de fundo */
@@ -739,7 +804,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para dar destaque */
     border-radius: 8px; /* Cantos arredondados */
     position: sticky;
-    top: 160px;
+    top: 140px;
     align-self: flex-start;
 }
 
@@ -756,10 +821,10 @@ button:hover {
 
 .noticia img {
     width: 100%;
-    height: 150px;
+    height: 100px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .noticia h3 {
@@ -799,12 +864,11 @@ button:hover {
 
 @media (max-width: 1024px) {
     #noticias {
-        display: none           ;
+        display: none;
     }
 }
 
 /* Iniciando a parte do footer */
-
 footer {
     background-color: var(--cor-fundo);
     padding: 40px 20px;
@@ -821,10 +885,10 @@ footer {
     position: fixed;  /* Fixa o footer no final da página */
     display: none;  /* Esconde o footer inicialmente */
 }
-  
-  footer.show {
-    display: block;  /* Torna o footer visível quando a classe "show" for adicionada */
-  }
+
+footer.show {
+display: block;  /* Torna o footer visível quando a classe "show" for adicionada */
+}
 
 
 

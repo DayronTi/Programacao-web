@@ -6,12 +6,14 @@
     <title>AgruHub</title>
     <link rel="icon" href="./imagens/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/estilo-da-pagina-inicial.css">
+    <!-- LINK SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <header class="header">
         <div class="menu-topo">
             <div class="menu-logo">
-                <a href="/index.html"><img src="/imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"></a>
+                <a href="./index.html"><img src="./imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"></a>
             </div>
             <form action="/pesquisa" method="get" class="barra-pesquisa">
                 <input type="search" name="q" placeholder="Busque assuntos..." aria-label="Buscar Assuntos"
@@ -19,7 +21,7 @@
                 <button type="submit" class="btn-pesquisa">Pesquisar</button>
             </form>
             <div class="acessar-carrinho">
-                <form action="/html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
+                <form action="./html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
             </div>
         </div>
     </header>
@@ -28,20 +30,20 @@
             <header id="perfilConf" class="online">
                 <img id="fotoPerfil" src="./imagens/iconUser.jpeg" alt="Uma imagem de quem está logado">
                 <div class="acessar-carrinho-menuLateral">
-                    <form action="/html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
+                    <form action="./html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
                 </div>
             </header>
             <nav id="opcoesMenu">
-                <a href="/html/ultimas-noticiais.html">
+                <a href="./html/ultimas-noticiais.html">
                     <i class="fa-solid fa-globe"></i><span>Últimas notícias</span>
                 </a>
-                <a href="/html/forum.html">
+                <a href="./html/forum.html">
                     <i class="fa-solid fa-comments"></i><span>Fórum</span>
                 </a>
-                <a href="/html/marketplace.html">
+                <a href="./html/marketplace.html">
                     <i class="fa-solid fa-store"></i> <span>Marketplace</span>
                 </a>
-                <a href="/html/diversidade-agru.html">
+                <a href="./html/diversidade-agru.html">
                     <i class="fa-solid fa-earth-americas"></i><span>Diversidade Agru</span>
                 </a>
                 <a href="#" id="linkVejaMais">Veja Mais...</a> <!-- Link "Veja Mais..." -->
@@ -52,16 +54,16 @@
                 <img id="fotoPerfil" src="./imagens/iconUser.jpeg" alt="Uma imagem de quem está logado">
             </header>
             <nav id="opcoesMenu-responsivo">
-                <a href="/html/ultimas-noticiais.html">
+                <a href="./html/ultimas-noticiais.html">
                     <i class="fa-solid fa-globe"></i><span>Últimas notícias</span>
                 </a>
-                <a href="/html/forum.html">
+                <a href="./html/forum.html">
                     <i class="fa-solid fa-comments"></i><span>Fórum</span>
                 </a>
-                <a href="/html/marketplace.html">
+                <a href="./html/marketplace.html">
                     <i class="fa-solid fa-store"></i> <span>Marketplace</span>
                 </a>
-                <a href="/html/diversidade-agru.html">
+                <a href="./html/diversidade-agru.html">
                     <i class="fa-solid fa-earth-americas"></i><span>Diversidade Agru</span>
                 </a>
                 </a>
@@ -70,45 +72,62 @@
         </aside>
         <main>
             <section id="hero">
+                <section class="quadros-de-noticias">
+                    <div class="quadros-de-noticias-em-texto">
+                        <h2>'O principal inimigo das colheitas são as prórias colheitas'</h2>
+                        <p>Pesquisadores afirmam que existe forma correta de colher e a forma errada de colheitas daniificam as colheitas</p>
+                    </div>
+                    <div class="quadros-de-noticias-em-fotos">
+                        <div class="primeiro-quadro">
+                            <p>Guerra</p>
+                            <h2>Conflito entre Terra e Marte trouxe consequências para outros planetas.</h2>
+                        </div>
+                        <div class="segundo-quadro">
+                            <p>Tóxico</p>
+                            <h2>Região Norte contaminada! Terra infértil e perca de economia.</h2>
+                        </div>                      
+                    </div> 
+                </section>
                 <section id="artigos">
+                    <h2>Principais notícias da semana</h2>
                     <div class="carousel-container">
                         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>  <!-- Botão de voltar -->
                         <div class="carousel">
                             <div class="tags-informativas">
                                 <div class="box">
                                     <img src="./imagens/eventoPlaneetasLindos.jpeg" alt="Imagem 1">
-                                    <h3>Título 1</h3>
-                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                                    <h3>Aproximação de planetas</h3>
+                                    <p>Durante os dias 25 a 29 os planetas da const...</p>
                                 </div>
                                 <div class="box">
                                     <img src="./imagens/imagemDaVista.jpeg" alt="Imagem 2">
-                                    <h3>Título 2</h3>
-                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
+                                    <h3>Plantação renovada</h3>
+                                    <p>A primavera está chegando no planeta Agru, um cenário verde está começando a surgir depois de... </p>
                                 </div>
                                 <div class="box">
                                     <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
-                                    <h3>Título 3</h3>
-                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
+                                    <h3>Conheça a Áurea</h3>
+                                    <p>Pesquisadores juntos a um grupo de exploradores encontraram um nova espécie de planta. As pesquisas...</p>
                                 </div>
                                 <div class="box">
                                     <img src="./imagens/hortaColheita.jpeg" alt="Imagem 4">
-                                    <h3>Título 4</h3>
-                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 4.</p>
+                                    <h3>Verão extremo!</h3>
+                                    <p>Verão mais intenso. Relatos de habitantes que passaram por momentos difíceis durante o longo verão...</p>
                                 </div>
                                 <div class="box">
-                                    <img src="./imagens/eventoPlaneetasLindos.jpeg" alt="Imagem 1">
-                                    <h3>Título 5</h3>
-                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 1.</p>
+                                    <img src="./imagens/climaGeladoSeco.jpeg" alt="Imagem 1">
+                                    <h3>Dois extremos!</h3>
+                                    <p>Qual o motivo desse ano ser o ano de maiores condiçoes extremas np planeta Agru?</p>
                                 </div>
                                 <div class="box">
-                                    <img src="./imagens/imagemDaVista.jpeg" alt="Imagem 2">
+                                    <img src="./imagens/nascerDoSol.jpeg" alt="Imagem 3">
+                                    <h3>Derretimento e novidades</h3>
+                                    <p>Exitem muitas espécies novas sendo encontradas após a região sul iniciar um periódo mais quente. Diante o clima seco...</p>
+                                </div>
+                                <div class="box">
+                                    <img src="/imagens/" alt="Imagem 2">
                                     <h3>Título 6</h3>
                                     <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 2.</p>
-                                </div>
-                                <div class="box">
-                                    <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
-                                    <h3>Título 7</h3>
-                                    <p>Esta é uma pequena descrição sobre o conteúdo do retângulo 3.</p>
                                 </div>
                                 <div class="box">
                                     <img src="./imagens/arvoreBoa.jpeg" alt="Imagem 3">
@@ -125,83 +144,81 @@
                         </div>
                         <button class="next" onclick="moveSlide(1)">&#10095;</button>  <!-- Botão de avançar -->
                     </div>
-                </section>                  
-                <section id="forum">
-                    <section id="discussoes">
-                        <h2>Principais conversas da semana</h2>
-                        <div class="postagem">
-                            <div class="usuario">
-                                <img class="foto-user" src="./imagens/fotoPerfil03.jpeg" alt="Perfil de Victor Gabriel">
-                                <div>
-                                    <h3>Victor Gabriel</h3>
-                                    <p>Postado há 2 horas</p>
-                                </div>
-                            </div>
-                            <div class="conteudo-postagem">
-                                <h2>Estou enfrentando um problema muito sério na minha plantação...</h2>
-                                <p>Olá pessoal, estou morando no sul do Agru e notei que algumas folhas das minhas plantas estão secando. Alguém já passou por isso? O que posso fazer?</p>
-                            </div>
-                            <div class="interacoes">
-                                <button><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
-                                <button><i class="fa-solid fa-comment"></i> Comentar</button>
-                                <button><i class="fa-solid fa-share"></i> Compartilhar</button>
+                </section>                   
+                <section class="forum-discussao">
+                    <h2>Perguntas com mais respostas</h2>
+                    <div class="postagem">
+                        <div class="usuario">
+                            <img class="foto-user" src="./imagens/fotoPerfil03.jpeg" alt="Perfil de Victor Gabriel">
+                            <div>
+                                <h3>Victor Gabriel</h3>
+                                <p>Postado há 2 horas</p>
                             </div>
                         </div>
-                        <div class="postagem">
-                            <div class="usuario">
-                                <img class="foto-user" src="./imagens/fotoPerfil02.jpeg" alt="Perfil de Maria Souza">
-                                <div>
-                                    <h3>Dayron Tinoco</h3>
-                                    <p>Postado há 5 horas</p>
-                                </div>
-                            </div>
-                            <div class="conteudo-postagem">
-                                <h2>Problemas com a irrigação no sistema Agru</h2>
-                                <p>Boa tarde, pessoal! Tenho enfrentado dificuldades com o sistema de irrigação automatizado que instalei, alguém tem alguma recomendação de ajustes?</p>
-                            </div>
-                            <div class="interacoes">
-                                <button><i class="fa-solid fa-thumbs-up"></i> <span>Curtir</span></button>
-                                <button><i class="fa-solid fa-comment"></i> <span>Comentar</span> </button>
-                                <button><i class="fa-solid fa-share"></i> <span>Compartilhar</span> </button>
+                        <div class="conteudo-postagem">
+                            <h2>Estou enfrentando um problema muito sério na minha plantação...</h2>
+                            <p>Olá pessoal, estou morando no sul do Agru e notei que algumas folhas das minhas plantas estão secando. Alguém já passou por isso? O que posso fazer?</p>
+                        </div>
+                        <div class="interacoes">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
+                            <button><i class="fa-solid fa-comment"></i> Comentar</button>
+                            <button><i class="fa-solid fa-share"></i> Compartilhar</button>
+                        </div>
+                    </div>
+                    <div class="postagem">
+                        <div class="usuario">
+                            <img class="foto-user" src="./imagens/fotoPerfil02.jpeg" alt="Perfil de Maria Souza">
+                            <div>
+                                <h3>Dayron Tinoco</h3>
+                                <p>Postado há 5 horas</p>
                             </div>
                         </div>
-                        <div class="postagem">
-                            <div class="usuario">
-                                <img class="foto-user" src="./imagens/fotoPerfil01.jpeg" alt="Perfil de Victor Gabriel">
-                                <div>
-                                    <h3>Giácomo</h3>
-                                    <p>Postado há 2 horas</p>
-                                </div>
-                            </div>
-                            <div class="conteudo-postagem">
-                                <h2>Estou enfrentando um problema muito sério na minha plantação...</h2>
-                                <p>Olá pessoal, estou morando no sul do Agru e notei que algumas folhas das minhas plantas estão secando. Alguém já passou por isso? O que posso fazer?</p>
-                            </div>
-                            <div class="interacoes">
-                                <button><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
-                                <button><i class="fa-solid fa-comment"></i> Comentar</button>
-                                <button><i class="fa-solid fa-share"></i> Compartilhar</button>
+                        <div class="conteudo-postagem">
+                            <h2>Problemas com a irrigação no sistema Agru</h2>
+                            <p>Boa tarde, pessoal! Tenho enfrentado dificuldades com o sistema de irrigação automatizado que instalei, alguém tem alguma recomendação de ajustes?</p>
+                        </div>
+                        <div class="interacoes">
+                            <button><i class="fa-solid fa-thumbs-up"></i> <span>Curtir</span></button>
+                            <button><i class="fa-solid fa-comment"></i> <span>Comentar</span> </button>
+                            <button><i class="fa-solid fa-share"></i> <span>Compartilhar</span> </button>
+                        </div>
+                    </div>
+                    <div class="postagem">
+                        <div class="usuario">
+                            <img class="foto-user" src="./imagens/fotoPerfil01.jpeg" alt="Perfil de Victor Gabriel">
+                            <div>
+                                <h3>Giácomo</h3>
+                                <p>Postado há 2 horas</p>
                             </div>
                         </div>
-                        <div class="postagem">
-                            <div class="usuario">
-                                <img class="foto-user" src="./imagens/fotoPerfil03.jpeg" alt="Perfil de Victor Gabriel">
-                                <div>
-                                    <h3>Victor Gabriel</h3>
-                                    <p>Postado há 2 horas</p>
-                                </div>
-                            </div>
-                            <div class="conteudo-postagem">
-                                <h2>Estou enfrentando um problema muito sério na minha plantação...</h2>
-                                <p>Olá pessoal, estou morando no sul do Agru e notei que algumas folhas das minhas plantas estão secando. Alguém já passou por isso? O que posso fazer?</p>
-                            </div>
-                            <div class="interacoes">
-                                <button><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
-                                <button><i class="fa-solid fa-comment"></i> Comentar</button>
-                                <button><i class="fa-solid fa-share"></i> Compartilhar</button>
+                        <div class="conteudo-postagem">
+                            <h2>Estou enfrentando um problema muito sério na minha plantação...</h2>
+                            <p>Olá pessoal, estou morando no sul do Agru e notei que algumas folhas das minhas plantas estão secando. Alguém já passou por isso? O que posso fazer?</p>
+                        </div>
+                        <div class="interacoes">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
+                            <button><i class="fa-solid fa-comment"></i> Comentar</button>
+                            <button><i class="fa-solid fa-share"></i> Compartilhar</button>
+                        </div>
+                    </div>
+                    <div class="postagem">
+                        <div class="usuario">
+                            <img class="foto-user" src="./imagens/fotoPerfil03.jpeg" alt="Perfil de Victor Gabriel">
+                            <div>
+                                <h3>Victor Gabriel</h3>
+                                <p>Postado há 2 horas</p>
                             </div>
                         </div>
-                    </section>
+                        <div class="conteudo-postagem">
+                            <h2>Estou enfrentando um problema muito sério na minha plantação...</h2>
+                            <p>Olá pessoal, estou morando no sul do Agru e notei que algumas folhas das minhas plantas estão secando. Alguém já passou por isso? O que posso fazer?</p>
+                        </div>
+                        <div class="interacoes">
+                            <button><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
+                            <button><i class="fa-solid fa-comment"></i> Comentar</button>
+                            <button><i class="fa-solid fa-share"></i> Compartilhar</button>
+                        </div>
+                    </div>
                 </section>
             </section>
         </main>       
@@ -209,27 +226,21 @@
             <h2>Notícias Intergaláticas</h2>
             <div class="noticia">
                 <img src="./imagens/galaxias.jpeg" alt="Notícia 1">
-                <h3><a href="#">Título da Notícia 1</a></h3>
-                <p>Descrição curta sobre a primeira notícia...</p>
+                <h3><a href="#">Galáxia ZooM</a></h3>
             </div>
             <div class="noticia">
                 <img src="./imagens/quatroImagensDeGalaxias.jpeg" alt="Notícia 2">
-                <h3><a href="#">Título da Notícia 2</a></h3>
-                <p>Descrição curta sobre a segunda notícia...</p>
+                <h3><a href="#">As 4 novas galaxias.</a></h3>
             </div>
-            <div class="noticia">
-                <img src="./imagens/planetaTerra.jpeg" alt="Notícia 3">
-                <h3><a href="#">Título da Notícia 3</a></h3>
-                <p>Descrição curta sobre a terceira notícia...</p>
-            </div>
-            <a href="#">Veja mais notícias</a>
+            <a href="/html/ultimas-noticiais.html">Veja mais notícias</a>
         </aside>
     </div>
     <footer>
         <p>Site feito para conectar habitantes do planeta Agru</p>
         <p>Agru©2264</p>
     </footer>
-    <script src="/js/index.js"></script>
+    <script src="./js/index.js"></script>
     <script src="https://kit.fontawesome.com/fe81a2bc32.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

@@ -1,319 +1,592 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AgruHub - Marketplace</title>
-        <link rel="icon" href="./imagens/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="/css/marketplace.css">
-    </head>
-
-    <body>
-        <!-- Início do cabeçalho -->
-        <header class="header">
-            <div class="menu-topo">
-                <div class="menu-logo">
-                    <a href="/index.html"><img src="/imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"></a>
-                </div>
-                <form action="/pesquisa" method="get" class="barra-pesquisa">
-                    <input type="search" name="q" placeholder="Buscar produtos..." aria-label="Buscar produtos"
-                        class="input-pesquisa">
-                    <button type="submit" class="btn-pesquisa">Pesquisar</button>
-                </form>
-                <div class="acessar-carrinho">
-                    <form action="/html/cadastro.html"><button href class="btn-acessar">Acessar / Cadastrar</button></form>
-                    <a href="/html/carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgruHub - Marketplace</title>
+    <link rel="icon" href="../imagens/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/marketplace.css" />
+  </head>
+  <body>
+    <!-- Início do cabeçalho -->
+    <header class="header">
+      <div class="menu-topo">
+        <div class="menu-logo">
+          <a href="../index.html"><img src="../imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"/></a>
+        </div>
+        <form action="/pesquisa" method="get" class="barra-pesquisa">
+          <input type="search" name="q" placeholder="Buscar produtos..." aria-label="Buscar produtos" class="input-pesquisa"/>
+          <button type="submit" class="btn-pesquisa">Pesquisar</button>
+        </form>
+        <div class="acessar-carrinho">
+          <form action="../html/cadastro.html">
+            <button href class="btn-acessar">Acessar / Cadastrar</button>
+          </form>
+          <a href="../html/carrinho.html"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+        </div>
+      </div>
+      <nav class="menu-nav">
+        <ul class="nav-lista">
+          <li class="nav-linha">
+            <a href="../html/Sessoes/fertilizantes-especiais.html" class="nav-item">Fertilizantes Especiais</a>
+          </li>
+          <li class="nav-linha"><a href="../html/Sessoes/sementes.html" class="nav-item">Sementes</a></li>
+          <li class="nav-linha">
+            <a href="../html/Sessoes/ferramentas.html" class="nav-item">Ferramentas</a>
+          </li>
+          <li class="nav-linha">
+            <a href="../html/Sessoes/pragas-insetos.html" class="nav-item">Pragas e Insetos</a>
+          </li>
+          <li class="nav-linha"><a href="../html/Sessoes/irrigacao.html" class="nav-item">Irrigação</a></li>
+          <li class="nav-linha">
+            <a href="../html/Sessoes/suprimentos.html" class="nav-item">Suprimentos</a>
+          </li>
+          <li class="nav-linha">
+            <a href="../html/Sessoes/produtos-locais.html" class="nav-item">Produtos locais</a>
+          </li>
+        </ul>
+        <button class="ver-categorias">
+          Ver categorias <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <ul class="nav-lista responsivo">
+          <li><a href="../html/Sessoes/fertilizantes-especiais.html" class="nav-item">Fertilizantes Especiais</a></li>
+          <li><a href="../html/Sessoes/sementes.html" class="nav-item">Sementes</a></li>
+          <li><a href="../html/Sessoes/ferramentas.html" class="nav-item">Ferramentas</a></li>
+          <li><a href="../html/Sessoes/pragas-insetos.html" class="nav-item">Pragas e Insetos</a></li>
+          <li><a href="../html/Sessoes/irrigacao.html" class="nav-item">Irrigação</a></li>
+          <li><a href="../html/Sessoes/suprimentos.html" class="nav-item">Suprimentos</a></li>
+          <li><a href="../html/Sessoes/produtos-locais.html" class="nav-item">Produtos locais</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Fim do cabeçalho -->
+    <main>
+      <!--- Banner de promoções -->
+      <section class="banners">
+        <!-- Container para o carrossel -->
+        <div class="container-slider">
+          <button id="prev-button">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <div class="container-imagens">
+            <img
+              src="../imagens/BLACK-AGRU-FRIDAY (3240 x 1080 px) (600 x 300 px) (1000 x 400 px) (1080 x 270 px)/banner2.png"
+              alt="banner 1"
+              class="slider on"
+            />
+            <img
+              src="../imagens/BLACK-AGRU-FRIDAY (3240 x 1080 px) (600 x 300 px) (1000 x 400 px) (1080 x 270 px)/banner2 (2).png"
+              alt="banner 2"
+              class="slider"
+            />
+            <img
+              src="../imagens/BLACK-AGRU-FRIDAY (3240 x 1080 px) (600 x 300 px) (1000 x 400 px) (1080 x 270 px)/banner1.png"
+              alt="banner 3"
+              class="slider"
+            />
+          </div>
+          <button id="next-button">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
+      <!-- Seção de Produtos em Destaque - Mostra os produtos mais populares e mais vendidos -->
+      <section class="produtos-destaque">
+        <h2 class="titulo-secao">Produtos em Destaque</h2>
+        <div class="grid-destaque">
+          <div class="carousel-container">
+            <button class="prev" onclick="moveSlideDestaqueProduto(-1)">
+              &#10094;
+            </button>
+            <!-- Botão de voltar -->
+            <div class="carrossel-produtos-destaque">
+              <div class="tags-informativas">
+                <!-- Produto  com preço -->
+                <article class="card-destaque box">
+                  <img
+                    src="../imagens/produtos/plantadeira_manual.png"
+                    alt="imagem do produto A"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Plantadeira Crux Tech</a>
+                  <a href="#" class="descricao-produto"
+                    >Ferramenta inovadora e eficiente para o plantio preciso.</a
+                  >
+                  <p class="preco-produto">
+                    Por: <data value="400.00">AG$ 109,99</data>
+                  </p>
+                </article>
+                <!-- Produto B com preço -->
+                <article class="card-destaque box">
+                  <img
+                    src="../imagens/produtos/GramaArtificial.jpg"
+                    alt="Grama Artificial"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Tapete de graminídeo</a>
+                  <a href="#" class="descricao-produto"
+                    >Ótimo para preenchimento de ortas e terraços.</a
+                  >
+                  <p class="preco-produto">
+                    Por: <data value="450.00">AG$ 80,99</data>
+                  </p>
+                </article>
+                <!-- Produto C com preço -->
+                <article class="card-destaque box">
+                  <img
+                    src="../imagens/produtos/MudaGraminhaClorofila.webp"
+                    alt="imagem do produto C"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Muda de Matagaína</a>
+                  <a href="#" class="descricao-produto"
+                    >Importante para o solo, transforma nitrogêneo em O2.</a
+                  >
+                  <p class="preco-produto">
+                    Por: <data value="500.00">AG$ 120,00</data>
+                  </p>
+                </article>
+                <!-- Produto D com preço -->
+                <article class="card-destaque box">
+                  <img
+                    src="../imagens/produtos/MudaGraminhaPet.webp"
+                    alt="imagem do produto D"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Muda de Chibats</a>
+                  <a href="#" class="descricao-produto"
+                    >Usada principalmente para hortas de Chibelts.</a
+                  >
+                  <p class="preco-produto">
+                    Por: <data value="550.00">AG$ 50,00</data>
+                  </p>
+                </article>
+                <!-- Produto E com preço -->
+                <article class="card-destaque box">
+                  <img
+                    src="../imagens/produtos/MudaOrquidea.jpg"
+                    alt="imagem do produto E"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Agrorquídea</a>
+                  <a href="#" class="descricao-produto"
+                    >Muda da orquídea mais rara da região de Agrusil, foi
+                    cultivada é o principal cultivo do norte.</a
+                  >
+                  <p class="preco-produto">
+                    Por: <data value="600.00">AG$ 60,99</data>
+                  </p>
+                </article>
+                <!-- Produto F com preço -->
+                <article class="card-destaque box">
+                  <img
+                    src="../imagens/produtos/flambari.jpg"
+                    alt="imagem do produto E"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Flambagru</a>
+                  <a href="#" class="descricao-produto"
+                    >Principal cultivo do Sul, plannta trepadeira.</a
+                  >
+                  <p class="preco-produto">
+                    Por: <data value="600.00">AG$ 60,99</data>
+                  </p>
+                </article>
+                <!-- Produto G com preço -->
+                <article class="card-destaque box">
+                  <img
+                    src="../imagens/produtos/Bouquet Astromélia.jpg"
+                    alt="imagem do produto E"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Agrumélia</a>
+                  <a href="#" class="descricao-produto"
+                    >Flor com alto odor, encontrada nas superfíceis aquáticas do rio Agruártico</a
+                  >
+                  <p class="preco-produto">
+                    Por: <data value="600.00">AG$ 60,99</data>
+                  </p>
+                </article>
+                <!-- Produto H com preço -->
+                <article class="card-destaque box">
+                  <img
+                    src="../imagens/produtos/florArtificialRedonda.jpg"
+                    alt="imagem do produto E"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Unidade de x-flor</a>
+                  <a href="#" class="descricao-produto"
+                    >Flor artificial, usada principalmente para decoração.</a
+                  >
+                  <p class="preco-produto">
+                    Por: <data value="600.00">AG$ 60,99</data>
+                  </p>
+                </article>
+              </div>
             </div>
-            <nav class="menu-nav">
-                <ul class="nav-lista">
-                    <li class="nav-linha" ><a href="#" class="nav-item">Fertilizantes Especiais</a></li>
-                    <li class="nav-linha" ><a href="#" class="nav-item">Sementes</a></li>
-                    <li class="nav-linha" ><a href="#" class="nav-item">Ferramentas</a></li>
-                    <li class="nav-linha" ><a href="#" class="nav-item">Rações</a></li>
-                    <li class="nav-linha" ><a href="#" class="nav-item">Pragas e Insetos</a></li>
-                    <li class="nav-linha" ><a href="#" class="nav-item">Irrigação</a></li>
-                    <li class="nav-linha" ><a href="#" class="nav-item">Suprimentos</a></li>
-                    <li class="nav-linha" ><a href="#" class="nav-item">Produtos locais</a></li>
-                    <li class="nav-linha" ><a href="#" class="nav-item">Serviços Especializados</a></li>
-                </ul>
-                <button class="ver-categorias" >Ver categorias <i class="fa-solid fa-angle-down"></i></button>
-                <ul class="nav-lista responsivo">
-                    <li><a href="#" class="nav-item">Fertilizantes Especiais</a></li>
-                    <li><a href="#" class="nav-item">Sementes</a></li>
-                    <li><a href="#" class="nav-item">Ferramentas</a></li>
-                    <li><a href="#" class="nav-item">Rações</a></li>
-                    <li><a href="#" class="nav-item">Pragas e Insetos</a></li>
-                    <li><a href="#" class="nav-item">Irrigação</a></li>
-                    <li><a href="#" class="nav-item">Suprimentos</a></li>
-                    <li><a href="#" class="nav-item">Produtos locais</a></li>
-                    <li><a href="#" class="nav-item">Serviços Especializados</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Fim do cabeçalho -->
-        <main>
-            <!-- Seção de Produtos em Destaque - Mostra os produtos mais populares e mais vendidos -->
-            <section class="produtos-destaque">
-                <h2 class="titulo-secao">Produtos em Destaque</h2>
-                <!-- Container para os produtos em destaque -->
-                <div class="grid-destaque">
-                    <!-- Produto A com preço -->
-                    <article class="card-destaque">
-                        <img src="/imagens/produtos/plantadeira_manual.png" alt="imagem do produto A"
-                            class="imagem-produto">
-                        <a href="#" class="nome-produto">Plantadeira Crux Tech</a>
-                        <a href="#" class="descricao-produto">Ferramenta inovadora e eficiente para o plantio preciso.
-                            Compacta e fácil de usar, ideal para agricultores que buscam
-                            agilidade e precisão no cultivo sustentável.</a>
-                        <p class="preco-produto">Por: <data value="400.00">AG$ 109,99</data></p>
-                    </article>
-                    <!-- Produto B com preço -->
-                    <article class="card-destaque">
-                        <img src="produtoB.jpg" alt="imagem do produto B" class="imagem-produto">
-                        <a href="#" class="nome-produto">Produto</a>
-                        <a href="#">Produto B</a>
-                        <p class="preco-produto">Por: <data value="450.00">AG$ 80,99</data></p>
-                    </article>
-                    <!-- Produto C com preço -->
-                    <article class="card-destaque">
-                        <img src="produtoC.jpg" alt="imagem do produto C" class="imagem-produto">
-                        <a href="#" class="nome-produto">Produto</a>
-                        <a href="#">Produto C</a>
-                        <p class="preco-produto">Por: <data value="500.00">AG$ 120,00</data></p>
-                    </article>
-                    <!-- Produto D com preço -->
-                    <article class="card-destaque">
-                        <img src="produtoD.jpg" alt="imagem do produto D" class="imagem-produto">
-                        <a href="#" class="nome-produto">Produto</a>
-                        <a href="#">Produto D</a>
-                        <p class="preco-produto">Por: <data value="550.00">AG$ 50,00</data></p>
-                    </article>
-                    <!-- Produto E com preço -->
-                    <article class="card-destaque">
-                        <img src="produtoE.jpg" alt="imagem do produto E" class="imagem-produto">
-                        <a href="#" class="nome-produto">Produto</a>
-                        <a href="#">Produto E</a>
-                        <p class="preco-produto">Por: <data value="600.00">AG$ 60,99</data></p>
-                    </article>
-                    <!-- Produto F com preço -->
-                </div>
-            </section>
-
-
-            
-                        <!-- Seção de Melhores Ofertas - Mostra produtos com descontos especiais -->
-                        <section class="melhores-ofertas">
-                            <h2 class="titulo-secao">Melhores Ofertas</h2>
-                            <!-- Container para o carrossel -->
-                            <div class="carrossel-container">
-                                <div class="carrossel">
-                                    <!-- Produto 1 -->
-                                    <article class="card-oferta">
-                                        <img src="/imagens/produtos/adubo_especial.png" alt="imagem do produto 1" class="imagem-produto">
-                                        <a href="#" class="nome-produto">Adubo especial 15Kg</a>
-                                        <p class="descricao-produto">Adubo orgânico sustentável que fortalece suas plantas e melhora a qualidade do solo.</p>
-                                        <p class="preco-original"><del>De: AG$ 190,00</del></p>
-                                        <p class="preco-promocional">Por: <data value="189.99">AG$ 189,99</data></p>
-                                    </article>
-                                    <!-- Produto 2 -->
-                                    <article class="card-oferta">
-                                        <img src="/imagens/produtos/plantadeira_manual.png" alt="imagem do produto 2" class="imagem-produto">
-                                        <a href="#" class="nome-produto">Orquídea de Agrusil</a>
-                                        <p class="descricao-produto">Muda da orquídea mais rara da região de Agrusil, foi cultivada no solo mais...</p>
-                                        <p class="preco-original"><del>De: AG$ 180,00</del></p>
-                                        <p class="preco-promocional">Por: <data value="150.00">AG$ 150,00</data></p>
-                                    </article>
-                                    <!-- Produto 3 -->
-                                    <article class="card-oferta">
-                                        <img src="/imagens/produtos/sementes-ancestrais.png" alt="imagem do produto 3" class="imagem-produto">
-                                        <a href="#" class="nome-produto">Casca de Orraz Carbonizada</a>
-                                        <p class="descricao-produto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus fug...</p>
-                                        <p class="preco-original"><del>De: AG$ 250,00</del></p>
-                                        <p class="preco-promocional">Por: <data value="200.00">AG$ 200,00</data></p>
-                                    </article>
-                                    <!-- Produto 4 -->
-                                    <article class="card-oferta">
-                                        <img src="/imagens/produtos/identificador.png" alt="imagem do produto 4" class="imagem-produto">
-                                        <a href="#" class="nome-produto">Identificador</a>
-                                        <p class="descricao-produto">Descrição curta do produto com detalhes...</p>
-                                        <p class="preco-original"><del>De: AG$ 310,00</del></p>
-                                        <p class="preco-promocional">Por: <data value="250.00">AG$ 250,00</data></p>
-                                    </article>
-                                    <!-- Produto 5 -->
-                                    <article class="card-oferta">
-                                        <img src="/imagens/produtos/" alt="imagem produto 5" class="imagem-produto">
-                                        <a href="#" class="nome-produto">Serrote de Poda Curvo</a>
-                                        <p class="descricao-produto">Descrição curta do produto com detalhes...</p>
-                                        <p class="preco-original"><del>De: AG$ 320,00</del></p>
-                                        <p class="preco-promocional">Por: <data value="300.00">AG$ 300,00</data></p>
-                                    </article>
-                                </div>
-                        
-                                <!-- Navegação do carrossel -->
-                                <button class="carrossel-prev" aria-label="Produto anterior">❮</button>
-                                <button class="carrossel-next" aria-label="Próximo produto">❯</button>
-                            </div>
-                        </section>
-
-
-
-            <!-- Seção de Produtos da Comunidade - Mostra produtos vendidos por membros das comunidades locais de Agru -->
-            <section class="produtos-comunidade">
-                <h2 class="titulo-secao">Produtos da Comunidade</h2>
-                <!-- Container para os produtos da comunidade -->
-                <div class="grid-comunidade">
-                    <!-- Produto X com preço -->
-                    <article class="card-comunidade">
-                        <img src="/imagens/produtos/sementes-ancestrais.png" alt="imagem do produto X"
-                            class="imagem-produto-comunidade">
-                        <a href="#" class="nome-produto-comunidade">Sementes Ancestrais de Agru</a>
-                        <br><a href="#" class="descricao-produto-comunidade">Sementes orgânicas de variedades
-                            tradicionais, cultivadas e preservadas pela comunidade agrícola de Agru.</a>
-                        <p class="preco-produto">Por: <data value="50.00">AG$ 50,00</data></p>
-                    </article>
-                    <!-- Produto Y com preço -->
-                    <article class="card-comunidade">
-                        <img src="/imagens/produtos/monada-roxa.png" alt="imagem do produto Y" class="imagem-produto-comunidade">
-                        <a href="#" class="nome-produto-comunidade">Monada Roxa</a>
-                        <br>
-                        <a href="#" class="descricao-produto-comunidade">Elemento especial da região de Agrusil que expande ao ser lançada, promovendo um efeito único de crescimento nas plantações.</a>
-                        <p class="preco-produto">Por: <data value="220.00">AG$ 220,00</data></p>
-                    </article>
-                    <!-- Produto Z com preço -->
-                    <article class="card-comunidade">
-                        <img src="produtoZ.jpg" alt="imagem do produto Z" class="imagem-produto-comunidade">
-                        <a href="#" class="nome-produto-comunidade">Produto</a>
-                        <a href="#" class="descricao-produto-comunidade">Produto Z</a>
-                        <p class="preco-produto">Por: <data value="15.00">AG$ 15,00</data></p>
-                    </article>
-                </div>
-            </section>
-            <!-- Barra lateral com ofertas especiais e promoções -->
-            <section class="grid-ofertas-servicos">
-                <aside class="ofertas-especiais">
-                    <h2>Ofertas Especiais</h2>
-                    <!-- Lista de ofertas especiais e condições promocionais -->
-                    <div class="oferta-item">
-                        <a href="#">Desconto em sementes especiais - 20% OFF</a>
-                    </div>
-                    <div class="oferta-item">
-                        <a href="#">Frete grátis para compras acima de AG$ 200,00</a>
-                    </div>
-                    <div class="oferta-item">
-                        <a href="#">Produtos para recuperação de solos - 15% OFF</a>
-                    </div>
-                </aside>
-                <!-- Seção de serviços especializados oferecidos -->
-                <aside class="servicos">
-                    <h2>Serviços Especializados</h2>
-                    <!-- Primeiro serviço com imagem e descrição -->
-                    <article class="servico-item">
-                        <p>Descrição do serviço 1.</p>
-                        <button>Saiba Mais</button>
-                    </article>
-                    <!-- Segundo serviço com imagem e descrição -->
-                    <article class="servico-item">
-                        <p>Descrição do serviço 2.</p>
-                        <button>Saiba Mais</button>
-                    </article>
-                    <!-- Terceiro serviço com imagem e descrição -->
-                    <article class="servico-item">
-                        <p>Descrição do serviço 3.</p>
-                        <button>Saiba Mais</button>
-                    </article>
-                </aside>
-            </section>
-            <!-- Seção de Newsletter - Área para cadastro de usuários interessados em receber novidades -->
-            <section class="newsletter">
-                <h2 class="titulo-secao-newsletter">Receba nossas novidades e ofertas exclusivas</h2>
-                <!-- Container do formulário de newsletter -->
-                <div class="container-newsletter">
-                    <!-- Formulário de inscrição na newsletter -->
-                    <form action="/newsletter" method="post" class="form-newsletter">
-                        <!-- Campo para entrada do nome do usuário -->
-                        <input type="text" id="nome" name="nome" class="input-newsletter" placeholder="Digite seu nome">
-                        <!-- Campo para entrada do email do usuário -->
-                        <input type="email" id="email" name="email" class="input-newsletter" placeholder="Digite seu e-mail">
-                        <!-- Botão para enviar o formulário -->
-                        <button type="submit" class="btn-newsletter">Cadastrar</button>
-                    </form>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer-container">
-                <!-- Seção de atendimento ao cliente com links importantes -->
-                <div class="footer-secao atendimento">
-                    <h3>Atendimento</h3>
-                    <p><i class="fa-solid fa-clock"></i> Seg à Sex das 8h às 17:45</p>
-                    <p><i class="fa-solid fa-phone"></i> (00) 1234-5678</p>
-                    <p><i class="fa-solid fa-envelope"></i> sac@agruhub.com.ag</p>
-                    <p><i class="fa-solid fa-envelope"></i> ouvidoria@agruhub.com.ag</p>
-                </div>
-                <!-- Links institucionais -->
-                <div class="footer-secao institucional">
-                    <h3>Institucional</h3>
-                    <ul>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Trabalhe Conosco</a></li>
-                        <li><a href="#">Avaliações</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <!-- Seção de informacoes com links para documentos importantes -->
-                <div class="footer-secao informacoes">
-                    <h3>Informações</h3>
-                    <ul>
-                        <li><a href="#">Privacidade</a></li>
-                        <li><a href="#">Entregas</a></li>
-                        <li><a href="#">Pagamentos</a></li>
-                        <li><a href="#">Compra Segura</a></li>
-                    </ul>
-                </div>
-                <!-- Links para redes sociais -->
-                <div class="footer-secao redes">
-                    <h3>Siga nossas redes</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Whatsapp</a></li>
-                        <li><a href="#">Xwitter</a></li>
-                    </ul>
-                </div>
+            <button class="next" onclick="moveSlideDestaqueProduto(1)">
+              &#10095;
+            </button>
+            <!-- Botão de avançar -->
+          </div>
+        </div>
+      </section>
+      <!-- Seção de Melhores Ofertas - Mostra produtos com descontos especiais -->
+      <section class="melhores-ofertas">
+        <h2 class="titulo-secao">Melhores Ofertas</h2>
+        <div class="grid-destaque">
+          <div class="carousel-container">
+            <button class="prev" onclick="moveSlideMelhoresOfertas(-1)">
+              &#10094;
+            </button>
+            <!-- Botão de voltar -->
+            <div class="carrossel-melhores-ofertas">
+              <div class="tags-informativas">
+                <!-- Produto 1 -->
+                <article class="card-oferta box">
+                  <img
+                    src="../imagens/produtos/adubo_especial.png"
+                    alt="imagem do produto 1"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Adubo especial 15Kg</a>
+                  <p class="descricao-produto">
+                    Fortalece suas plantas e
+                    melhora a qualidade do solo.
+                  </p>
+                  <p class="preco-original"><del>De: AG$ 190,00</del></p>
+                  <p class="preco-promocional">
+                    Por: <data value="189.99">AG$ 189,99</data>
+                  </p>
+                </article>
+                <!-- Produto 2 -->
+                <article class="card-oferta box">
+                  <img
+                    src="../imagens/produtos/Pas.jpg"
+                    alt="imagem do produto 2"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Pás Crux Tech</a>
+                  <p class="descricao-produto">Kit pás, usadas para jardinagem.</p>
+                  <p class="preco-original"><del>De: AG$ 180,00</del></p>
+                  <p class="preco-promocional">
+                    Por: <data value="150.00">AG$ 150,00</data>
+                  </p>
+                </article>
+                <!-- Produto 3 -->
+                <article class="card-oferta box">
+                  <img
+                    src="../imagens/produtos/racaoformiga.png"
+                    alt="imagem do produto 3"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto"
+                    >Formicida</a
+                  >
+                  <p class="descricao-produto">
+                    Misture ao solo, principal inseticida contra Agruformigas
+                  </p>
+                  <p class="preco-original"><del>De: AG$ 250,00</del></p>
+                  <p class="preco-promocional">
+                    Por: <data value="200.00">AG$ 200,00</data>
+                  </p>
+                </article>
+                <!-- Produto 4 -->
+                <article class="card-oferta box">
+                  <img
+                    src="../imagens/produtos/tesouraParaAparas.jpg"
+                    alt="imagem do produto 4"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Tesora podadora CruxTech</a>
+                  <p class="descricao-produto">
+                    Ótima para regulagem da horta.
+                  </p>
+                  <p class="preco-original"><del>De: AG$ 310,00</del></p>
+                  <p class="preco-promocional">
+                    Por: <data value="250.00">AG$ 250,00</data>
+                  </p>
+                </article>
+                <!-- Produto 5 -->
+                <article class="card-oferta box">
+                  <img
+                    src="../imagens/produtos/TesouraParaPouda.jpg"
+                    alt="imagem produto 5"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Serrote de Poda Curvo</a>
+                  <p class="descricao-produto">
+                    Ótimo para cortar pequenos troncos.
+                  </p>
+                  <p class="preco-original"><del>De: AG$ 320,00</del></p>
+                  <p class="preco-promocional">
+                    Por: <data value="300.00">AG$ 300,00</data>
+                  </p>
+                </article>
+                <!-- Produto 6 -->
+                <article class="card-oferta box">
+                  <img
+                    src="../imagens/produtos/foicinha.jpg"
+                    alt="imagem produto 5"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Foicinha CruxTech</a>
+                  <p class="descricao-produto">
+                    Usada para regulagem de tamanho de hortas.
+                  </p>
+                  <p class="preco-original"><del>De: AG$ 320,00</del></p>
+                  <p class="preco-promocional">
+                    Por: <data value="300.00">AG$ 300,00</data>
+                  </p>
+                </article>
+                <!-- Produto 7 -->
+                <article class="card-oferta box">
+                  <img
+                    src="../imagens/produtos/joelho.jpg"
+                    alt="imagem produto 5"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">Joelho</a>
+                  <p class="descricao-produto">
+                    Para sistema de irrigação, conhecido como 'curva' ou 'L'.
+                  </p>
+                  <p class="preco-original"><del>De: AG$ 320,00</del></p>
+                  <p class="preco-promocional">
+                    Por: <data value="300.00">AG$ 300,00</data>
+                  </p>
+                </article>
+                <!-- Produto 8 -->
+                <article class="card-oferta box">
+                  <img
+                    src="../imagens/produtos/uniao.jpg"
+                    alt="imagem produto 5"
+                    class="imagem-produto"
+                  />
+                  <a href="#" class="nome-produto">União</a>
+                  <p class="descricao-produto">
+                    Para sistema de irrigação, também conhecido como 'luva'.
+                  </p>
+                  <p class="preco-original"><del>De: AG$ 320,00</del></p>
+                  <p class="preco-promocional">
+                    Por: <data value="300.00">AG$ 300,00</data>
+                  </p>
+                </article>
+              </div>
             </div>
-            <hr>
-            <!-- Seção que mostra os métodos de pagamento aceitos -->
-            <div class="footer-pagamentos">
-                <h3>Formas de Pagamento</h3>
-                <div class="payment-icons">
-                    <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
-                    <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
-                    <a href="#"><i class="fa-brands fa-pix"></i></a>
-                    <a href="#"><i class="fa-regular fa-file"></i></a>
-                </div>
-            </div>
-            <!-- Seção de segurança com ícones de certificados e selos de segurança -->
-            <div class="footer-seguranca">
-                <h3>Segurança</h3>
-                <div class="seguranca-icons">
-                    <a href="#"><i class="fa-brands fa-google"></i></a>
-                    <a href="#"><i class="fa-solid fa-shield"></i></a>
-                    <a href="#"><i class="fa-solid fa-certificate"></i></a>
-                </div>
-            </div>
-            <hr>
-            <div class="footer-legal">
-                <div class="footer-logo">
-                    <a href="/index.html"><img src="/imagens/AgruHUB-logo2.svg" alt="Logo do site"></a>
-                </div>
-                <p>Agruhub atua desde XXVVMIII para atender às necessidades de clientes em todo o planeta Agru.</p>
-                <p>&reg; AgruHUB Marketplace | CNPJ: 77.777.777/0007-77 - Todos os direitos reservados.</p>
-                <p>Powered by Crux &copy; 2024 - Todos os direitos reservados.</p>
-            </div>
-        </footer>
-    <script src="https://kit.fontawesome.com/fe81a2bc32.js" crossorigin="anonymous"></script>
-    <script src="/js/index.js"></script>    
-    </body>
+            <button class="next" onclick="moveSlideMelhoresOfertas(1)">
+              &#10095;
+            </button>
+            <!-- Botão de avançar -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Produtos da Comunidade - Mostra produtos vendidos por membros das comunidades locais de Agru -->
+      <section class="produtos-comunidade">
+        <h2 class="titulo-secao">Produtos da Comunidade</h2>
+        <!-- Container para os produtos da comunidade -->
+        <div class="grid-comunidade">
+          <!-- Produto X com preço -->
+          <article class="card-comunidade">
+            <img
+              src="../imagens/produtos/sementes-ancestrais.png"
+              alt="imagem do produto X"
+              class="imagem-produto-comunidade"
+            /> <br>
+            <a href="#" class="nome-produto-comunidade"
+              >Sementes Ancestrais de Agru</a
+            >
+            <br /><a href="#" class="descricao-produto-comunidade"
+              >Sementes orgânicas de variedades tradicionais, cultivadas e
+              preservadas pela comunidade agrícola de Agru.</a
+            >
+            <p class="preco-produto">
+              Por: <data value="50.00">AG$ 50,00</data>
+            </p>
+          </article>
+          <!-- Produto Y com preço -->
+          <article class="card-comunidade">
+            <img
+              src="../imagens/produtos/barraca.jpg"
+              alt="imagem do produto Y"
+              class="imagem-produto-comunidade"
+            /> <br>
+            <a href="#" class="nome-produto-comunidade">Cabana CruxTech</a>
+            <br />
+            <a href="#" class="descricao-produto-comunidade"
+              >Ótima escolha para acampamentos noturnos.</a
+            >
+            <p class="preco-produto">
+              Por: <data value="220.00">AG$ 220,00</data>
+            </p>
+          </article>
+          <!-- Produto Z com preço -->
+          <article class="card-comunidade">
+            <img
+              src="../imagens/produtos/machado.jpg"
+              alt="imagem do produto Z"
+              class="imagem-produto-comunidade"
+            />
+            <a href="#" class="nome-produto-comunidade">Machado CruxTech</a> <br>
+            <a href="#" class="descricao-produto-comunidade">Machado da marca CruxTech.</a>
+            <p class="preco-produto">
+              Por: <data value="15.00">AG$ 15,00</data>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Barra lateral com ofertas especiais e promoções -->
+      <section class="grid-ofertas-servicos hidden-section">
+        <aside class="ofertas-especiais">
+          <h2>Ofertas Especiais</h2>
+          <!-- Lista de ofertas especiais e condições promocionais -->
+          <div class="oferta-item">
+            <a href="../html/OfertasEspeciais/descontos-de-sementes.html">Desconto em sementes especiais - 20% OFF</a>
+          </div>
+          <div class="oferta-item">
+            <a href="../html/OfertasEspeciais/frete-gratis.html">Frete grátis para compras acima de AG$ 200,00</a>
+          </div>
+          <div class="oferta-item">
+            <a href="../html/OfertasEspeciais/produtos-de-solos.html">Produtos para recuperação de solos - 15% OFF</a>
+          </div>
+        </aside>
+        <!-- Seção de serviços especializados oferecidos -->
+        <aside class="servicos hidden-section">
+          <h2>Serviços Especializados</h2>
+          <!-- Primeiro serviço com imagem e descrição -->
+          <article class="servico-item">
+            <p>Análise do solo.</p>
+            <button>Saiba Mais</button>
+          </article>
+          <!-- Segundo serviço com imagem e descrição -->
+          <article class="servico-item">
+            <p>Mapeamento de horta.</p>
+            <button>Saiba Mais</button>
+          </article>
+          <!-- Terceiro serviço com imagem e descrição -->
+          <article class="servico-item">
+            <p>Contribuir com o AgruHub.</p>
+            <button>Saiba Mais</button>
+          </article>
+        </aside>
+      </section>
+      <!-- Seção de Newsletter - Área para cadastro de usuários interessados em receber novidades -->
+      <section class="newsletter">
+        <h2 class="titulo-secao-newsletter">
+          Receba nossas novidades e ofertas exclusivas
+        </h2>
+        <!-- Container do formulário de newsletter -->
+        <div class="container-newsletter">
+          <!-- Formulário de inscrição na newsletter -->
+          <form action="/newsletter" method="post" class="form-newsletter">
+            <!-- Campo para entrada do nome do usuário -->
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              class="input-newsletter"
+              placeholder="Digite seu nome"
+            />
+            <!-- Campo para entrada do email do usuário -->
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input-newsletter"
+              placeholder="Digite seu e-mail"
+            />
+            <!-- Botão para enviar o formulário -->
+            <button type="submit" class="btn-newsletter">Cadastrar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Seção de atendimento ao cliente com links importantes -->
+        <div class="footer-secao atendimento">
+          <h3>Atendimento</h3>
+          <p><i class="fa-solid fa-clock"></i> Seg à Sex das 8h às 17:45</p>
+          <p><i class="fa-solid fa-phone"></i> (00) 1234-5678</p>
+          <p><i class="fa-solid fa-envelope"></i> sac@agruhub.com.ag</p>
+          <p><i class="fa-solid fa-envelope"></i> ouvidoria@agruhub.com.ag</p>
+        </div>
+        <!-- Links institucionais -->
+        <div class="footer-secao institucional">
+          <h3>Institucional</h3>
+          <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+            <li><a href="#">Avaliações</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <!-- Seção de informacoes com links para documentos importantes -->
+        <div class="footer-secao informacoes">
+          <h3>Informações</h3>
+          <ul>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Entregas</a></li>
+            <li><a href="#">Pagamentos</a></li>
+            <li><a href="#">Compra Segura</a></li>
+          </ul>
+        </div>
+        <!-- Links para redes sociais -->
+        <div class="footer-secao redes">
+          <h3>Siga nossas redes</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Xwitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <!-- Seção que mostra os métodos de pagamento aceitos -->
+      <div class="footer-pagamentos">
+        <h3>Formas de Pagamento</h3>
+        <div class="payment-icons">
+          <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
+          <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+          <a href="#"><i class="fa-brands fa-pix"></i></a>
+          <a href="#"><i class="fa-regular fa-file"></i></a>
+        </div>
+      </div>
+      <!-- Seção de segurança com ícones de certificados e selos de segurança -->
+      <div class="footer-seguranca">
+        <h3>Segurança</h3>
+        <div class="seguranca-icons">
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+          <a href="#"><i class="fa-solid fa-shield"></i></a>
+          <a href="#"><i class="fa-solid fa-certificate"></i></a>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-legal">
+        <div class="footer-logo">
+          <a href="../index.html"
+            ><img src="../imagens/AgruHUB-logo2.svg" alt="Logo do site"
+          /></a>
+        </div>
+        <p>
+          Agruhub atua desde XXVVMIII para atender às necessidades de clientes
+          em todo o planeta Agru.
+        </p>
+        <p>
+          &reg; AgruHUB Marketplace | CNPJ: 77.777.777/0007-77 - Todos os
+          direitos reservados.
+        </p>
+        <p>Powered by Crux &copy; 2024 - Todos os direitos reservados.</p>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/fe81a2bc32.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/marketplace.js" defer></script>
+  </body>
 </html>

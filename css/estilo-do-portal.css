@@ -181,31 +181,35 @@ body {
 /* Artigo principal */
 .principal {
     padding: 20px;
-    background-color: white;
+    background-image: url(/imagens/um\ planeta\ com\ tonalidades\ de\ azul\ diferentes\,\ sem\ anel\,\ no\ espaço\,\ com\ poucos\ outros\ planetas\ ao\ redor\ \(1\).png);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.artigo-principal img {
-    background-size: cover;
-    margin-top: 100px;
-    width: 100%;
-    height: 60vh;
-    border-radius: 8px;
+.principal:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
 }
 
 .artigo-principal h2 {
+
+    color: white;
     font-size: 1.8rem;
-    margin-top: 15px;
+    margin-top: 280px;
 }
 
 .artigo-principal p {
-    color: #555;
+    color: #ffffff;
 }
 
 .artigo-principal a {
-    color: var(--cor-fundo);
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -476,6 +480,149 @@ button:hover {
     }
 
 }
+
+.forum-discussao {
+    padding: 30px;
+    }
+    
+    .forum-discussao h2, #artigos h2 {
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+    .postagem {
+        background-color: #fff;
+        margin-bottom: 30px;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+    
+    .postagem:hover {
+        transform: scale(1.03);
+        background-color: rgb(250, 250, 250);
+    }
+    
+    .usuario {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .foto-user {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        object-fit: cover;
+    }
+    
+    .usuario h3 {
+        font-size: 18px;
+        color: var(--cor-fundo);
+        margin-bottom: 5px;
+    }
+    
+    .usuario p {
+        font-size: 14px;
+        color: #777;
+    }
+    
+    /* Conteúdo da postagem */
+    .conteudo-postagem h2 {
+        font-size:20px;
+        color: var(--cor-principal);
+        margin-bottom: 10px;
+    }
+    
+    .conteudo-postagem p {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    /* Interações */
+    .interacoes {
+        display: flex;
+        gap: 15px;
+        font-size: 14px;
+        color: #555;
+    }
+    
+    .interacoes button {
+        background: none;
+        border: none;
+        color: var(--cor-fundo);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+    }
+    
+    .interacoes button:hover {
+        color: var(--cor-principal);
+    }
+    
+    .interacoes i {
+        font-size: 16px;
+    }
+    
+    /* Estilo para o título da seção de discussões */
+    #discussoes h1 {
+        font-size: 32px;
+        color: var(--cor-fundo);
+        margin-bottom: 20px;
+    }
+    
+    .fotouser {
+        width: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+    
+    #post-texto {
+        border: 1px solid black;
+        padding: 5%;
+    }
+    
+    #perfilUser {
+        display: flex;
+    }
+    
+    #conteudo h2 {
+        padding: 6% 0 6% 0;
+        font-size: 30px;
+    }
+    
+    #reacoes button {
+        border: 0px;
+        background-color: rgba(245, 245, 245, 0);
+        width: 15px;
+        padding: 30px;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Rodapé */

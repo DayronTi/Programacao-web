@@ -1,0 +1,209 @@
+/* Aqui vamos definir o estilo do nosso marketplace */
+/* Explore a paleta de cores (#547FB0, #4EB1E7, #7AD3DC, #F2F2F2, #333333) e tipografia (Títulos: Inter; Sub-títulos: Roboto; Texto: Lato) para criar um design coerente com a temática. Utilize unidades relativas nas medidas. Organize o código CSS para ser legível e fácil de entender. Teste o design em diferentes navegadores e dispositivos. */
+
+/* Import das fontes*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*Definição de variáveis de estilo*/
+:root {
+  --cor-de-hover: rgb(22, 82, 160);
+  --cor-principal: #4eb1e7;
+  /* Azul meio termo*/
+  --cor-secundaria: #7ad3dc;
+  /* Azul claro*/
+  --cor-fundo: #547fb0;
+  /* Azul escuro*/
+  --cor-texto: #333333;
+  /* Cor do texto */
+  --cor-fundo-branco: #f2f2f2;
+  /* Cor de fundo branco */
+  --fonte-titulo: "Inter";
+  --fonte-sub-titulo: "Roboto";
+  --fonte-texto: "lato";
+}
+
+/* Reset CSS */
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-texto);
+}
+
+/* Estilização básica do header */
+.header {
+  background-color: var(--cor-fundo-branco);
+  /* Cor de fundo clara */
+  padding: 15px 30px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Logo */
+.menu-logo .logo {
+  width: 200px;
+  padding: 10px 0;
+  height: auto;
+}
+
+/* Menu topo */
+.menu-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Botões de acesso e carrinho */
+.acessar-carrinho {
+  display: flex;
+  justify-content: center;
+}
+
+.acessar-carrinho a {
+  margin: 0 20px;
+  font-size: 25px;
+  color: var(--cor-fundo);
+}
+
+.acessar-carrinho a:hover {
+  font-size: 25px;
+  color: #003f88;
+}
+
+.acessar-carrinho button {
+  background-color: var(--cor-fundo);
+  /* Azul para botões */
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-acessar:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-topo {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .acessar-carrinho {
+    padding: 2% 20%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .acessar-carrinho a {
+    margin: 0 20px;
+    font-size: 25px;
+    color: var(--cor-fundo);
+  }
+
+  .menu-nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    overflow-x: auto;
+    background-color: var(--cor-fundo);
+  }
+
+  .menu-nav button {
+    background-color: var(--cor-fundo);
+    display: block;
+    border: none;
+    color: white;
+    font-weight: 500;
+  }
+
+  .nav-lista {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 440px) {
+  .input-pesquisa {
+    width: 50%;
+  }
+
+  .btn-pesquisa {
+    width: 27%;
+  }
+
+  .acessar-carrinho {
+    padding: 4% 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .menu-nav {
+    overflow-x: auto;
+  }
+
+  .nav-lista {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.cart-container {
+    margin-top: 60px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.cart-summary {
+    margin-top: 30px;
+    text-align: right;
+}
+
+#checkout-button {
+    background-color: #dc3545; /* Cor vermelha */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-button:hover {
+    background-color: #c82333; /* Cor vermelha mais escura ao passar o mouse */
+}
+

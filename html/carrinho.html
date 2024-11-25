@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="../css/estilo-carrinho.css">
+</head>
+<body>
+    <!-- Início do cabeçalho -->
+    <header class="header">
+        <div class="menu-topo">
+          <div class="menu-logo">
+            <a href="../index.html"><img src="../imagens/AgruHUB-logo2.svg" alt="Logo do site" class="logo"/></a>
+          </div>
+          <div class="acessar-carrinho">
+            <form action="../html/cadastro.html">
+              <button href class="btn-acessar">Acessar / Cadastrar</button>
+            </form>
+            <a href="../html/carrinho.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div class="cart-container">
+            <h1>Carrinho de Compras</h1>
+    
+            <!-- Lista de itens no carrinho -->
+            <div id="cart-items">
+                <!-- Os itens do carrinho serão inseridos dinamicamente aqui -->
+            </div>
+    
+            <!-- Resumo do carrinho -->
+            <div class="cart-summary">
+                <p id="total-price">Total: R$ 0,00</p>
+                <p id="shipping-price">Frete: R$ 0,00</p>
+                <p id="final-price">Preço Final: R$ 0,00</p>
+    
+                <button id="checkout-button">Finalizar Compra</button>
+            </div>
+        </div>
+      </section>
+    <script src="../js/carrinho.js"></script>
+</body>
+</html>
